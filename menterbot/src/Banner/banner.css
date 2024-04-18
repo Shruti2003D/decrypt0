@@ -1,0 +1,50 @@
+.container {
+    max-width: 1750px;
+    margin: auto;
+    /* padding: 16px; */
+    border-radius: 8px;
+}
+
+.banner {
+    height:93vh; /* Adjust as needed */
+    width: 100%;
+    background-color: slategray;
+    position: relative;
+    overflow: hidden;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.controls button {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    padding: 8px;
+    cursor: pointer;
+}
+
+.desktop-images{
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-container {
+    flex: 0 0 100%;
+    height: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+}

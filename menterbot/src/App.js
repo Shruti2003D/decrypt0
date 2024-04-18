@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Banner/>
       <div className="content-container">
         <div className="mentorbot-container">
