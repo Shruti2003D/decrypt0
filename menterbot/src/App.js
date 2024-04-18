@@ -1,8 +1,9 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Header from './header/Header';
 import Navbar from './Navbar/Navbar';
 import Banner from './Banner/Banner'
+import Blogs from './Blog/Blogs';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Blogs/>
     </div>
   );
 }

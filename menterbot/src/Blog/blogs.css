@@ -1,0 +1,88 @@
+.Blogs {
+    margin-top: 50px;
+    /* text-align: center; */
+    padding: 10px;
+    background-color: #ffffff; /* optional: add background color */
+  }
+  .Blogs h2 {
+    font-size: 30px;
+    font-family: Helvetica;/* Multiple font families */
+    display: block;
+    margin: 2rem 0px 2rem; 
+    text-align: center;
+    color: #FF751A;
+  }
+  
+
+.butt {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 42%;
+  margin-right: 42%;
+}
+
+.butt button {
+  background-color: #FF751A; /* Red background by default */
+  font-family: "Roboto", sans-serif;
+  border: none; 
+  cursor: pointer;
+  font-size: 14px;
+  padding: 15px;
+  text-align: center;
+}
+
+.butt button:hover {
+  background-color: #ec6a13; /* Blue background on hover */
+}
+ /*Cards CSS*/
+
+ .cards {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: flex-start;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.card {
+  position: relative; /* Ensure the date is positioned relative to the card */
+  background-color: #FD9066;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  width: calc(33.33% - 10px); /* Adjusted width calculation */
+  margin-right: 1em; /* Margin between cards */
+  margin-left: 1em;
+}
+
+/* Remove margin from the last card to prevent it from creating unnecessary space */
+.card:last-child {
+  margin-right: 0;
+}
+.card a {
+  position: absolute;
+  bottom: 20px; 
+  left: 20px; 
+  color: black;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: "Proxima Nova", sans-serif; /* Proxima Nova font*/
+  /* text-align: left; */
+}
+
+.card p {
+  font-size: 14px;
+  color: #000000;
+  font-family: Futura, sans-serif; /*Futura font family */
+  text-align: justify;
+  margin-top: 2rem;
+}
+.date {
+  position: absolute; 
+  top: 20px; 
+  left: 20px; 
+  font-size: 14px;
+  color: #666;
+}
