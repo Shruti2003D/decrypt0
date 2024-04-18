@@ -1,0 +1,13 @@
+/* Header.css */
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff751a;; /* optional: add background color */
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
