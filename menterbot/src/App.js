@@ -1,15 +1,17 @@
-
+import React, { useState } from 'react';
 import './App.css';
 import Header from './header/Header';
 import Navbar from './Navbar/Navbar';
-import Banner from './Banner/Banner'
+import Banner from './Banner/Banner';
 import Blogs from './Blog/Blogs';
 
 function App() {
+  const [backgroundImage, setBackgroundImage] = useState('');
+
   return (
     <div className="App">
       <Header/>
-      {/* <Navbar/> */}
+      <Navbar/>
       <Banner/>
       <div className="content-container">
         <div className="mentorbot-container">
