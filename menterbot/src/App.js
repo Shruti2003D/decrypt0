@@ -7,6 +7,7 @@ import Header from './header/Header';
 import Navbar from './Navbar/Navbar';
 import Banner from './Banner/Banner';
 import Blogs from './Blog/Blogs';
+import Testimonials from './Components/Testimonials';
 import Footer from './Footer/Footer'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         </div>
       </div>
       <Blogs/>
+      <Testimonials/>
       <Footer/>
     </div>
   );
