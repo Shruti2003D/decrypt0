@@ -4,6 +4,7 @@ import Header from './header/Header';
 import Navbar from './Navbar/Navbar';
 import Banner from './Banner/Banner'
 import Blogs from './Blog/Blogs';
+import Footer from './Footer/Footer'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         </div>
       </div>
       <Blogs/>
+      <Footer/>
     </div>
   );
 }
