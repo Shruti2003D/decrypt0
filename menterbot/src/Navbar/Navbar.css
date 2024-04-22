@@ -1,0 +1,59 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orange; /* Default background color */
+    padding: 10px 20px;
+    transition: background-color 0.5s ease-in-out;
+  }
+  
+  .logo img {
+    height: 50px;
+    width: auto;
+  }
+  
+  .navbar-links {
+    display: flex;
+  }
+  
+  .navbar-links a {
+    position: relative; /* Position relative to contain pseudo-element */
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .navbar-links a::after {
+    content: ''; /* Create pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width of parent */
+    height: 2px; /* Height of the line */
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .navbar-links a:hover::after {
+    background-color: #ff751a; /* Change background color on hover */
+  }
+  
+  .login-button,
+  .signup-button {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .login-button:hover,
+  .signup-button:hover {
+    background-color: #ff751a; /* Change background color on hover */
+    border: 2px solid #ff751a; /* Add border on hover */
+    border-radius: 5px; /* Add border radius */
+  }
+  
+  .transparent-bg {
+    background-color: transparent !important; /* Override default background color */
+  }
+  
