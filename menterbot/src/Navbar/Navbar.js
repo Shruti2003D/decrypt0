@@ -1,8 +1,8 @@
-
 import React from 'react';
- // Import CSS file for styling
+import './Navbar.css'; // Import the CSS file
+import logo from '../assets/menterbotlogo.png'; // Assuming this is the path to your logo image
 
-const Navbar = () => {
+const Navbar = ({ backgroundColor }) => {
   return (
     <div className="Navbar">
       <h1>its navbar</h1>
