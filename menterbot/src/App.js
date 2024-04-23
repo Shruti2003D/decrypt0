@@ -11,6 +11,9 @@ import Testimonials from "./Components/Testimonials";
 import Footer from './Components/Footer';
 
 
+import Testimonials from './Components/Testimonials';
+import Footer from './Footer/Footer'
+
 function App() {
   const [backgroundImage, setBackgroundImage] = useState('');
 
@@ -28,7 +31,7 @@ function App() {
             <p>We understand that selecting on a career path can be a difficult and daunting experience, which is why we provide complete career counselling services in order to assist individuals in identifying their talents and interests and navigating the employment market. Our skilled consultants work with each person to develop an individually tailored strategy that is in line with their goals and aspirations.</p>
           </div>
         </div>
-      </div> 
+      </div>
       <Blogs/>
       <Testimonials/>
       <Footer/>

@@ -1,8 +1,7 @@
 .Blogs {
     margin-top: 50px;
-    /* text-align: center; */
     padding: 10px;
-    background-color: #ffffff; /* optional: add background color */
+    /* background-color: #F3F3F3; optional: add background color */
   }
   .Blogs h2 {
     font-size: 30px;
@@ -16,7 +15,6 @@
 
 .butt {
   margin-top: 2rem;
-  margin-bottom: 2rem;
   margin-left: 42%;
   margin-right: 42%;
 }
@@ -32,7 +30,7 @@
 }
 
 .butt button:hover {
-  background-color: #ec6a13; /* Blue background on hover */
+  background-color: #ec6a13;
 }
  /*Cards CSS*/
 
@@ -45,12 +43,12 @@
 }
 
 .card {
-  position: relative; /* Ensure the date is positioned relative to the card */
+  position: relative; 
   background-color: #FD9066;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 50px;
   width: calc(33.33% - 10px); /* Adjusted width calculation */
-  margin-right: 1em; /* Margin between cards */
+  margin-right: 1em;
   margin-left: 1em;
 }
 
