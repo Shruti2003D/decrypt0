@@ -15,11 +15,6 @@ code {
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  body {
-    background-color:black;
-  }
-}
 
 .slick-slide > div {
   margin: 0 20px;
@@ -27,10 +22,5 @@ code {
 }
 
 .slick-dots li.slick-active button:before {
-  color:white !important;
-  
-
+  color:black !important;
 }
-
-
-
