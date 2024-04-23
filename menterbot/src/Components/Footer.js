@@ -11,7 +11,7 @@ import LinkedIn from '../assets/icons8-linkedin.svg';
 import Youtube from '../assets/icons8-youtube.svg';
 import WhatsApp from '../assets/wa.svg';
 import logo from '../assets/logo.png'
-// import { FaRegCopyright } from 'react-icons/fa';
+import { FaRegCopyright } from 'react-icons/fa';
 
 const Footer = () => {
   return (

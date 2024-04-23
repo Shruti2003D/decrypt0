@@ -1,10 +1,10 @@
 import React from 'react';
-import './blogs.css'; // Assuming your CSS file is named blogs.css
+import '../css/blogs.css';// Assuming your CSS file is named blogs.css
 
 const Blogs = () => {
   return (
     <div className="Blogs">
-      {/* <p>Blogs! Wait for Some time Blogs content is loading</p> */}
+     
       <h2>Read From Our Latest Blogs.</h2>
       
       <div className='cards'>
