@@ -39,19 +39,19 @@
     /* transition: transform 1s ease-in-out; */
 }
 
-.image-container {
+.image-container1 {
     flex: 0 0 100%;
     height: 100%;
     transition: opacity 1s ease-in-out; /*Transition for fading effect*/
     opacity: 0; /* Default to more transparent */
 }
 
-.image-container.active {
+.image-container1.active {
     opacity: 1; /* Fully opaque when active */
 }
 
 
-.image-container img {
+.image-container1 img {
     width: 100%;
     height: 100%;
     object-fit: fill;

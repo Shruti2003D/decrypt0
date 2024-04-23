@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/footer.css'
+import '../css/footer.css'; // Import CSS file for styling
 import whatsapplogo from '../assets/whatsapp.svg';
 import Lifetime from '../assets/Lifetime.svg';
 import Expert from '../assets/Expert.svg';
@@ -11,7 +11,7 @@ import LinkedIn from '../assets/icons8-linkedin.svg';
 import Youtube from '../assets/icons8-youtube.svg';
 import WhatsApp from '../assets/wa.svg';
 import logo from '../assets/logo.png'
-import { FaRegCopyright } from 'react-icons/fa';
+// import { FaRegCopyright } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -23,15 +23,15 @@ const Footer = () => {
         <a href="https://wa.me/+917224032078" target="_blank" class="custom-button">JUST CLICK HERE !</a>
       </div>
       <div className="quoteimage">
-        <div className="image-container">
+        <div className="image-container2">
           <img src={Online} alt="Image 1" />
           <p>Guiding</p>
         </div>
-        <div className="image-container">
+        <div className="image-container2">
           <img src={Expert} alt="Image 2" />
           <p>Training</p>
         </div>
-        <div className="image-container">
+        <div className="image-container2">
           <img src={Lifetime} alt="Image 3" />
           <p>Services</p>
         </div>
@@ -69,9 +69,10 @@ const Footer = () => {
         </div>
 
       </div>
-      <p>Copyright <FaRegCopyright /> 2024 mentorbot.in</p>
+      {/* <p>Copyright <FaRegCopyright /> 2024 mentorbot.in</p> */}
+      <p>Copyright © 2024 mentorbot.in</p>
     </div>
   );
 };
 
-export default Footer;
+export default Footer;

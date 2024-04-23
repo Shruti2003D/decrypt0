@@ -57,7 +57,7 @@ const Banner = () => {
                     </div>
                     <div className='desktop-images'>
                         {desktopImages.map((url, index) => (   
-                            <div key={index} className={`image-container ${index === currentImage ? 'active' : ''}`} style={{ transform: `translateX(-${currentImage * 100}%)` }}>
+                            <div key={index} className={`image-container1 ${index === currentImage ? 'active' : ''}`} style={{ transform: `translateX(-${currentImage * 100}%)` }}>
                                 {index === 0 && (
                                     <>
                                         <h1 className={`${index === currentImage ? 'active banner-text-left' : ''} ${startAnimation ? 'animate-text' : ''}`}>
