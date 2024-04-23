@@ -10,10 +10,6 @@ import Blogs from './Blog/Blogs';
 import Testimonials from "./Components/Testimonials";
 import Footer from './Components/Footer';
 
-
-import Testimonials from './Components/Testimonials';
-import Footer from './Footer/Footer'
-
 function App() {
   const [backgroundImage, setBackgroundImage] = useState('');
 
