@@ -72,3 +72,13 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+  }
+  .navbar-links > * {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
