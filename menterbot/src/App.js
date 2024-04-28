@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './App.css';
-import Header from './header/Header';
+
 import Navbar from './Navbar/Navbar';
 import Banner from './Banner/Banner';
 import Blogs from './Components/Blogs';
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
+    
       <Navbar/>
       <Banner/> 
       <div className="content-container">

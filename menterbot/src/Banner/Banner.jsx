@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 import './banner.css'; // Import the CSS file
-import image1 from '../asgitsets/banner1.png';
+import image1 from '../assets/banner1.png';
 import image2 from '../assets/banner2.png';
 import image3 from '../assets/banner3.png';
 

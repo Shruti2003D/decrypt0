@@ -1,13 +1,32 @@
 // Header.js
-
-import React from 'react';
-import './Header.css'; // Import CSS file for styling
+import React, { useState, useEffect } from 'react';
+import './Header.css';
 
 const Header = () => {
+  const [hideHeader, setHideHeader] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const bannerHeight = document.querySelector('.banner').offsetHeight;
+      if (scrollTop > bannerHeight / 2) {
+        setHideHeader(true);
+      } else {
+        setHideHeader(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="header">
+    <header className={`Header ${hideHeader ? 'hide' : ''}`}>
       <h1>✨ Welcome To Learn With Fun!!! ✨</h1>
-    </div>
+    </header>
   );
 };
 
