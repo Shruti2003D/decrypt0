@@ -36,6 +36,7 @@ const Navbar = () => {
           <a href="/about" className="navbar-text hover-effect">About</a>
           <a href="/contact" className="navbar-text hover-effect">Contact</a>
           <a href="/careers" className="navbar-text hover-effect">Careers</a>
+          <a href="/careers" className="navbar-text hover-effect">Services</a>
           <div className="dropdown">
             <a href="/courses" className="navbar-text hover-effect">Courses</a>
             <div className="dropdown-content">
