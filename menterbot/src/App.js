@@ -9,6 +9,7 @@ import Banner from './Banner/Banner';
 import Blogs from './Components/Blogs';
 import Testimonials from "./Components/Testimonials";
 import Footer from './Components/Footer';
+import Partner from './Components/Partner';
 
 function App() {
   const [backgroundImage, setBackgroundImage] = useState('');
@@ -29,8 +30,10 @@ function App() {
         </div>
       </div>
       <Testimonials/>
-      <Blogs/>
+
       
+      <Blogs/>
+      <Partner></Partner>
       <Footer/>
     </div>
   );

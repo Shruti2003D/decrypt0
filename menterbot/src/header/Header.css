@@ -2,6 +2,8 @@
 
 .Header {
   position: fixed;
+  font-size: 20px;
+  font-family: Helvetica;
   top: 0;
   left: 0;
   width: 100%;

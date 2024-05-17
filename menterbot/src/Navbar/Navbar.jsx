@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className="logo">
           <img src={logo} alt="Menterbot Logo" className="logo-img" />
         </div>
-        {/* Adjust the following divs according to your layout */}
+       
         <div className="navbar-links">
           <a href="/blogs" className="navbar-text hover-effect">Blogs</a>
           <a href="/about" className="navbar-text hover-effect">About</a>
