@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import logo from '../assets/menterbotlogo.png';
+import { Link } from 'react-router-dom';
 import Header from '../header/Header';
 
 const Navbar = () => {
@@ -30,25 +31,24 @@ const Navbar = () => {
         <div className="logo">
           <img src={logo} alt="Menterbot Logo" className="logo-img" />
         </div>
-       
         <div className="navbar-links">
-          <a href="/blogs" className="navbar-text hover-effect">Blogs</a>
-          <a href="/about" className="navbar-text hover-effect">About</a>
-          <a href="/contact" className="navbar-text hover-effect">Contact</a>
-          <a href="/careers" className="navbar-text hover-effect">Careers</a>
-          <a href="/careers" className="navbar-text hover-effect">Services</a>
+          <Link to="/blogs" className="navbar-text hover-effect">Blogs</Link>
+          <Link to="/about" className="navbar-text hover-effect">About</Link>
+          <Link to="/contact" className="navbar-text hover-effect">Contact</Link>
+          <Link to="/careers" className="navbar-text hover-effect">Careers</Link>
+          {/* <Link to="/services" className="navbar-text hover-effect">Services</Link> */}
           <div className="dropdown">
-            <a href="/courses" className="navbar-text hover-effect">Courses</a>
+            <Link to="/courses" className="navbar-text hover-effect">Courses</Link>
             <div className="dropdown-content">
-              <a href="/courses/beginner" className="navbar-text">Beginner Level</a>
-              <a href="/courses/intermediate" className="navbar-text">Intermediate Level</a>
-              <a href="/courses/advanced" className="navbar-text">Advanced Level</a>
+              <Link to="/courses/beginner" className="navbar-text">Beginner Level</Link>
+              <Link to="/courses/intermediate" className="navbar-text">Intermediate Level</Link>
+              <Link to="/courses/advanced" className="navbar-text">Advanced Level</Link>
             </div>
           </div>
         </div>
         <div className="login-signup">
-          <a href="/login" className="login-button hover-effect">Login</a>
-          <a href="/signup" className="signup-button hover-effect">Sign Up</a>
+          <Link to="/login" className="login-button hover-effect">Login</Link>
+          <Link to="/signup" className="signup-button hover-effect">Sign Up</Link>
         </div>
       </nav>
     </>
