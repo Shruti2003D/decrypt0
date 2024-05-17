@@ -1,48 +1,45 @@
+/* Testimonials container */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url('path/to/proxima-nova.woff2') format('woff2'),
+       url('path/to/proxima-nova.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .testimonials-container {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.slick-slide {
-  margin: 0 10rem;
+  margin: 2rem auto;
+  padding: 20rem;
 
 }
 
-.slick-list {
-  margin: 0 -1rem;
-}
-
-.slick-prev:before, .slick-next:before {
-  font-family: 'slick';
-  font-size: 20px;
-  line-height: 1;
-  opacity: 1;
-  color: black;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+/* Testimonial card container */
 .testimonial-card {
+  position: relative; /* To ensure proper stacking of elements */
+  overflow: hidden; /* Hide any overflow from child elements */
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px white;
-  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 20rem;
   text-align: center;
   display: flex;
+  margin-top: 4rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
+/* Avatar image */
 .testimonial-avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 1rem;
+  transition: transform 0.5s ease; /* Smooth transition for zoom effect */
 }
 
 .testimonial-avatar img {
@@ -51,25 +48,38 @@
   object-fit: cover;
 }
 
-.testimonial-name {
-  font-size: 10 rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
+/* Name and review */
+.testimonial-name,
 .testimonial-review {
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: center;
+  transition: transform 0.5s ease; /* Smooth transition for zoom effect */
 }
 
+/* Apply zoom effect on hover */
+.testimonial-card:hover .testimonial-avatar {
+  transform: scale(2.0); /* Zoom in the avatar image on hover */
+}
+
+.testimonial-card:hover .testimonial-name,
+.testimonial-card:hover .testimonial-review {
+  transform: scale(2.0); /* Zoom in the name and review on hover */
+}
+
+/* Custom text color */
 .text-orange-500 {
-  color:white;
-  
-  
+  color: white;
 }
+
+/* Testimonials title */
 .text-4xl {
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  margin-top: 5rem;
+  font-size: 5rem;
+  line-height: 4rem;
+  margin-top: 10rem;
+  padding-top: 5rem;
+  margin-bottom: 10rem;
 }
+
+.testimonial-content {
+  font-family: "Proxima Nova", sans-serif;
+}
+
+
