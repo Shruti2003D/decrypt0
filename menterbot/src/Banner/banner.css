@@ -7,7 +7,7 @@
 }
 
 .banner {
-    height: 95vh; /* Adjust as needed */
+    height: 100vh; /* Adjust as needed */
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -73,7 +73,7 @@
 }
 .desktop-images h1 {
     top: 15%;
-    left: -8%;
+    left: -9%;
     color: black;
     font-size: 3rem;
     z-index: 1;
@@ -94,12 +94,12 @@
 
 .desktop-images h3{
     position: absolute;
-    text-align: right;
+    text-align: left;
     font-weight: bold;
     font-size: 3rem;
     color:darkblue;
     top: 20%;
-    left: -5%;
+    left: -18%;
     /* animation: slideLeftWord 2s ease forwards;
     animation-delay: 2s; */
 }
@@ -120,7 +120,7 @@
     text-align: left;
     font-weight: bold;
     font-size: 3rem;
-    top: 13%;
+    top: 7%;
     left: -14%;
     /* animation: slideLeftWord 2s ease forwards; */
     /* animation-delay: 2s; */

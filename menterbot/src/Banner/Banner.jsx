@@ -85,7 +85,7 @@ const Banner = () => {
                                 {index === 2 && (
                                     <>
                                         <h5 className={` ${index === currentImage ? 'active banner-text-left' : ''} ${startAnimation ? 'animate-text' : ''}`}>
-                                            To Learn<br/>From Home
+                                            New Way <br/>To Learn<br/>From Home
                                         </h5>
                                         <h6 className={` ${index === currentImage ? 'active banner-text-right' : ''} ${startAnimation ? 'animate-text' : ''}`}>
                                             "Unlock your potential in the world of<br/>
