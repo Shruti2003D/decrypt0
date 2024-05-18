@@ -1,0 +1,28 @@
+.partner-container {
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #FF751A;
+    margin-top: 2%;
+    padding-top: 1%;
+  }
+  
+  .partner-images {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Increase the gap between images */
+  }
+  
+  .image-container2 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .partner-images img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto;
+    max-height: 100px; /* Ensure images do not exceed this height */
+    object-fit: contain; /* Ensure images fit within the given dimensions */
+  }
+  
