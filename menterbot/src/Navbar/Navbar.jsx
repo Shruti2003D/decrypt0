@@ -6,15 +6,20 @@ import Header from '../header/Header';
 
 const Navbar = () => {
   const [hideNavbar, setHideNavbar] = useState(false);
-  const [scrolledUp, setScrolledUp] = useState(false);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const bannerHeight = document.querySelector('.banner').offsetHeight;
 
-      setHideNavbar(scrollTop > bannerHeight / 2);
-      setScrolledUp(scrollTop > 0);
+      if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        setHideNavbar(true);
+      } else {
+        // Scrolling up
+        setHideNavbar(false);
+      }
+      setLastScrollTop(scrollTop);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -22,12 +27,12 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [lastScrollTop]);
 
   return (
     <>
       <Header />
-      <nav className={`Navbar ${hideNavbar ? 'hide' : ''} ${scrolledUp ? 'scrolled-up' : ''}`}>
+      <nav className={`Navbar ${hideNavbar ? 'hide' : ''}`}>
         <div className="navbar-container">
           <div className="logo">
             <Link to="/">

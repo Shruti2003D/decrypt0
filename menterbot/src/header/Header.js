@@ -1,19 +1,22 @@
-// Header.js
 import React, { useState, useEffect } from 'react';
 import './Header.css';
 
 const Header = () => {
   const [hideHeader, setHideHeader] = useState(false);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const bannerHeight = document.querySelector('.banner').offsetHeight;
-      if (scrollTop > bannerHeight / 2) {
+
+      if (scrollTop > lastScrollTop) {
+        // Scrolling down
         setHideHeader(true);
       } else {
+        // Scrolling up
         setHideHeader(false);
       }
+      setLastScrollTop(scrollTop);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -21,7 +24,7 @@ const Header = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [lastScrollTop]);
 
   return (
     <header className={`Header ${hideHeader ? 'hide' : ''}`}>

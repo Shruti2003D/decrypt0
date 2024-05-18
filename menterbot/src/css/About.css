@@ -1,0 +1,96 @@
+/* AboutUs.css */
+.about-us-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #ffffff; /* White background for the whole section */
+    font-family: 'Helvetica', 'Proxima Nova', 'Futura', sans-serif;
+    margin-top: 50px;
+  }
+  
+  .about-us-title {
+    font-size: 36px;
+    color: #ff751a; /* Theme color for the title */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .about-us-subtitle {
+    font-size: 24px;
+    color: #333; /* Dark color for the subtitle */
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .motivation-box {
+    background-color: #ff751a; /* Orange background for the outer box */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 40px; /* Space below the motivation box */
+    width: 100%; /* Full width */
+    max-width: 800px; /* Limit the maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better look */
+  }
+  
+  .motivation-inner-box {
+    background-color: #ffffff; /* White background for the inner box */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+  }
+  
+  .team-container {
+    display: flex;
+    flex-direction: column; /* Column layout */
+    align-items: center;
+    gap: 20px; /* Space between team member boxes */
+  }
+  
+  .team-member {
+    background-color: #ff751a; /* Orange background for the outer box */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    width: 100%; /* Full width */
+    max-width: 800px; /* Limit the maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  }
+  
+  .team-member:hover {
+    transform: translateY(-5px); /* Lift the box slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+  }
+  
+  .member-inner-box {
+    background-color: #ffffff; /* White background for the inner box */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    width: 100%;
+    text-align: center;
+  }
+  
+  .member-photo {
+    width: 100px; /* Adjust the size as necessary */
+    height: 100px; /* Adjust the size as necessary */
+    border-radius: 50%; /* Circular photo */
+    margin-bottom: 20px;
+  }
+  
+  .member-name {
+    font-size: 20px;
+    color: #333; /* Dark color for the name */
+    margin-bottom: 10px;
+  }
+  
+  .member-role {
+    font-size: 18px;
+    color: #ff751a; /* Theme color for the role */
+    margin-bottom: 10px;
+  }
+  
+  .member-description {
+    font-size: 16px;
+    color: #666; /* Grey color for the description */
+  }
+  

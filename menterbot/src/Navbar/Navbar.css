@@ -1,3 +1,4 @@
+/* Navbar.css */
 .Navbar {
   position: fixed;
   top: 44px;
@@ -9,10 +10,15 @@
   padding: 10px 20px;
   background-color: transparent; /* Transparent background */
   z-index: 100;
-  transition: opacity 0.3s ease, background-color 0.3s ease; /* Smooth transition for opacity and background color */
+  transition: top 0.3s ease, background-color 0.3s ease, opacity 0.3s ease; /* Smooth transition for top, opacity and background color */
 }
 
-.scrolled-up {
+.Navbar.hide {
+  top: -100px; /* Adjust as necessary to hide the Navbar */
+  opacity: 0; /* Hide the navbar */
+}
+
+.Navbar.scrolled-up {
   background-color: white; /* Change background color to white when scrolled up */
   color: black; /* Change font color to black when scrolled up */
 }
@@ -112,11 +118,6 @@
 /* White underline for selected navbar item */
 .selected {
   border-bottom: 2px solid white;
-}
-
-.hide {
-  opacity: 0; /* Hide the navbar */
-  background-color: transparent; /* Transparent background */
 }
 
 /* Apply Google Sans Text font to specific navbar elements */
