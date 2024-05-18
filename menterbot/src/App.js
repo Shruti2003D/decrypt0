@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
 import Banner from './Banner/Banner';
 import Blogs from './Components/Blogs';
+import Partner from './Components/Partner';
 import Testimonials from "./Components/Testimonials";
 import Footer from './Components/Footer';
 
@@ -40,6 +41,7 @@ function App() {
         </div>
         <Testimonials />
         <Blogs />
+        <Partner/>
         <Footer />
       </div>
 

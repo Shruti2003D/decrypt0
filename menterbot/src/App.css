@@ -40,23 +40,32 @@
 .content-container {
   width: 80%; /* Adjust width as needed */
   margin: auto; /* Add this line */
-  margin-top: 20px;
+  margin-top: 5%;
+ 
+
 }
 .mentorbot-container {
   background-color:#ff751a;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .mentorbot-container h2 {
   color: white;
-  text-size: 20px;
+  font-size: 36px;
+  font-family: Helvetica;
+ 
+
 }
 
 .mentorbot-container h3 {
   color: white;
   margin-top: 5px;
+  font-family: Proxima Nova;
+  font-size:20px;
 }
 
 .description-box {
@@ -64,6 +73,8 @@
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
+  font-family: Futura;
+  font-size:15px;
 }
 @keyframes App-logo-spin {
   from {
