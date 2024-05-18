@@ -11,18 +11,18 @@ const Partner = () => {
       <h2>Our Partners</h2>
       <div className="partner-images">
       
-        <div className="image-container2">
+        <div className="partner-image-container2">
           <img src={partner1} alt="Image 1" />
         </div>
-        <div className="image-container2">
+        <div className="partner-image-container2">
           <img src={partner2} alt="Image 1" />
         </div>
 
-        <div className="image-container2">
+        <div className="partner-image-container2">
           <img src={partner3} alt="Image 1" />
     
         </div>
-        <div className="image-container2">
+        <div className="partner-image-container2">
           <img src={partner4} alt="Image 1" />
     
         </div>
