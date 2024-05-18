@@ -21,6 +21,8 @@
     justify-content: space-between;
     transform: translateY(-50%);
     z-index: 10;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 .controls button {
@@ -30,6 +32,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 8px;
     cursor: pointer;
+    
 }
 
 .desktop-images {
@@ -72,15 +75,14 @@
     /* text-align: center; */
 }
 .desktop-images h1 {
-    top: 15%;
-    left: -13%;
+    top: 7.5rem;
+    left: -7rem;
     font-family: Helvetica;
     color: black;
     font-size: 3rem;
-    z-index: 1;
-    opacity: 1;
     font-weight: bold;
-    
+    position: absolute;
+    text-align: left;
 }
 .desktop-images h2 {
     font-family: "Proxima Nova", sans-serif;
@@ -101,8 +103,8 @@
     font-weight: bold;
     font-size: 3rem;
     color:darkblue;
-    top: 20%;
-    left: -18%;
+    top: 10rem;
+    left: -16rem;
     /* animation: slideLeftWord 2s ease forwards;
     animation-delay: 2s; */
 }
@@ -112,8 +114,8 @@
     position: absolute;
     text-align: left;
     font-size: 1.3rem;
-    top: 68%;
-    left: 2%;
+    top: 30rem;
+    left: 4rem;
     color:darkslateblue;
     /* animation: slideLeftWord 2s ease forwards; */
     /* animation-delay: 2s; */
@@ -125,8 +127,8 @@
     text-align: center;
     font-weight: bold;
     font-size: 2.5rem;
-    top: 10%;
-    left: -6%;
+    top: 8rem;
+    left: -5rem;
     /* animation: slideLeftWord 2s ease forwards; */
     /* animation-delay: 2s; */
 }
@@ -135,8 +137,8 @@
     position: absolute;
     text-align: center;
     font-size: 1.4rem;
-    top: 35%;
-    left: 3%;
+    top: 19.5rem;
+    left: 3.5rem;
     color:rgb(46, 46, 75);
     /* animation: slideLeftWord 2s ease forwards; */
     /* animation-delay: 2s; */

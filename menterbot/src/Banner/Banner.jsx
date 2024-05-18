@@ -20,7 +20,7 @@ const Banner = () => {
                     setStartAnimation(true);
                 }, 500); // Timeout to match CSS transition time
             }
-            return (prev+1) % desktopImages.length;
+            return (prev + 1) % desktopImages.length;
         });
     }, [desktopImages.length]);
 
@@ -56,9 +56,10 @@ const Banner = () => {
                         <button onClick={nextImage}><FaAngleRight /></button>
                     </div>
                     <div className='desktop-images'>
-                        {desktopImages.map((url, index) => (   
+                        {desktopImages.map((url, index) => (
                             <div key={index} className={`image-container1 ${index === currentImage ? 'active' : ''}`} style={{ transform: `translateX(-${currentImage * 100}%)` }}>
                                 {index === 0 && (
+
                                     <>
                                         <h1 className={`${index === currentImage ? 'active banner-text-left' : ''} ${startAnimation ? 'animate-text' : ''}`}>
                                             Guiding Your Next Step
@@ -68,16 +69,18 @@ const Banner = () => {
                                             Career Counselling<br />and <br />Tech Skills Training<br /> All in One Place!
                                         </h2>
                                     </>
+
+
                                 )}
                                 {index === 1 && (
                                     <>
                                         <h3 className={`${index === currentImage ? 'active banner-text-left' : ''} ${startAnimation ? 'animate-text' : ''}`}>
-                                            Take a Step in<br/>Cyber<br/> Security<br/>   With Us!
+                                            Take a Step in<br />Cyber<br /> Security<br />   With Us!
                                         </h3>
                                         <h4 className={`${index === currentImage ? 'active banner-text-right' : ''} ${startAnimation ? 'animate-text' : ''}`}>
-                                            Welcome to Mentorbot, a premiere technology training<br/>
-                                            provider specializing in cybersecurity training,<br/>
-                                            penetration testing, bug hunting, cyber forensics, AWS,<br/>
+                                            Welcome to Mentorbot, a premiere technology training<br />
+                                            provider specializing in cybersecurity training,<br />
+                                            penetration testing, bug hunting, cyber forensics, AWS,<br />
                                             and data science.
                                         </h4>
                                     </>
@@ -85,16 +88,16 @@ const Banner = () => {
                                 {index === 2 && (
                                     <>
                                         <h5 className={` ${index === currentImage ? 'active banner-text-left' : ''} ${startAnimation ? 'animate-text' : ''}`}>
-                                            New Way <br/>To Learn<br/>From Home
+                                            New Way <br />To Learn<br />From Home
                                         </h5>
                                         <h6 className={` ${index === currentImage ? 'active banner-text-right' : ''} ${startAnimation ? 'animate-text' : ''}`}>
-                                            "Unlock your potential in the world of<br/>
-                                            cyber security with our exceptional<br/>
-                                            training programs. Gain the skills and<br/>
-                                            knowledge needed to defend against<br/>
-                                            threats and build a successful career. Join<br/>
-                                            our city's top-rated cyber security training<br/>
-                                            and become an expert in protecting digital<br/>
+                                            "Unlock your potential in the world of<br />
+                                            cyber security with our exceptional<br />
+                                            training programs. Gain the skills and<br />
+                                            knowledge needed to defend against<br />
+                                            threats and build a successful career. Join<br />
+                                            our city's top-rated cyber security training<br />
+                                            and become an expert in protecting digital<br />
                                             landscapes."
                                         </h6>
                                     </>

@@ -13,7 +13,7 @@ function Testimonials() {
 
   return (
     <div className='w-3/4 m-auto'>
-      <h2 className="text-orange-500 text-4xl mt-20" style={{ fontFamily: 'Helvetica, Arial, sans-serif' }}>Testimonials</h2>
+      <h2 className="text-4xl mt-20" style={{ fontFamily: 'Helvetica, Arial, sans-serif',color: '#FF751A' }}>Testimonials</h2>
       <div className="mt-10">
         <Slider {...settings}>
           {data.map((d) => (
