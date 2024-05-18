@@ -5,6 +5,12 @@ const Careers = () => {
     <div>
       <h2>Careers</h2>
       <p>Explore exciting career opportunities with us...</p>
+      <h2>Careers</h2>
+      <p>Explore exciting career opportunities with us...</p>
+      <h2>Careers</h2>
+      <p>Explore exciting career opportunities with us...</p>
+      <h2>Careers</h2>
+      <p>Explore exciting career opportunities with us...</p>
     </div>
   );
 };

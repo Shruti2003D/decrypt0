@@ -1,18 +1,15 @@
-/* Navbar.css */
-
 .Navbar {
   position: fixed;
   top: 44px;
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center-align navbar items */
   align-items: center;
   padding: 10px 20px;
   background-color: transparent; /* Transparent background */
   z-index: 100;
   transition: opacity 0.3s ease, background-color 0.3s ease; /* Smooth transition for opacity and background color */
-  /* Default font color */
 }
 
 .scrolled-up {
@@ -20,10 +17,17 @@
   color: black; /* Change font color to black when scrolled up */
 }
 
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .logo img {
   height: 40px; /* Adjust logo height as needed */
   width: auto;
-  margin-left: 263px;
+  margin-right: 20px; /* Adjust margin to position logo closer to "Blogs" */
 }
 
 .navbar-links {

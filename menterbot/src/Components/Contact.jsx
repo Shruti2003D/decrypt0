@@ -5,6 +5,10 @@ const Contact = () => {
     <div>
       <h2>Contact Us</h2>
       <p>Feel free to reach out to us for any queries...</p>
+      <h2>Contact Us</h2>
+      <p>Feel free to reach out to us for any queries...</p><h2>Contact Us</h2>
+      <p>Feel free to reach out to us for any queries...</p><h2>Contact Us</h2>
+      <p>Feel free to reach out to us for any queries...</p>
     </div>
   );
 };
