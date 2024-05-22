@@ -14,7 +14,7 @@ import Signup from './Components/signup';
 import CoursesBeg from './Components/courses-beg';
 import CoursesInt from './Components/courses-int';
 import CoursesAdv from './Components/coursesadv';
-
+import Blogsmain from './Components/blogs-main';
 function App() {
   return (
     <Router>
@@ -22,6 +22,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blogsmain/>}/>
+        
         <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/courses" element={<Courses />} />
