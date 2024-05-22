@@ -40,6 +40,8 @@
   justify-content: flex-start;
   margin-left: 13%;
   margin-right: 13%;
+  padding-bottom: 1%;
+  padding-top: 1%;
 }
 
 .card {
@@ -68,6 +70,7 @@
   font-size: 18px;
   font-family: "Proxima Nova", sans-serif; /* Proxima Nova font*/
   /* text-align: left; */
+  font-weight: bold;
 }
 
 .card p {
