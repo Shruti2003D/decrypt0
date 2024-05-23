@@ -32,14 +32,14 @@ const CoursesBeg = () => {
                         <span className="rating-value">4.5</span>
                       </div>
                       <div className="course_rate">
-                        <span className="discount_rate">59,999</span>
-                        <span className="real_rate">(74,999</span>
+                        <span className="discount_rate">₹ 59,999 </span>
+                        <span className="real_rate">(₹ 74,999  </span>
                         <span className="discount_cent">20.00% OFF)</span>
                       </div>
                       <div></div>
                       <div>
                         <p className="course-instructor">
-                          Instructor: <span className="discount_rate">Abhishek Chouriya</span>
+                         <div className='instructor'>Instructor: </div> <span className="discount_rate">Abhishek Chouriya</span>
                         </p>
                       </div>
                     </div>
@@ -66,8 +66,8 @@ const CoursesBeg = () => {
                         <span className="rating-value">4.5</span>
                       </div>
                       <div className="course_rate">
-                        <span className="discount_rate">49,999</span>
-                        <span className="real_rate">(58,822</span>
+                        <span className="discount_rate">₹ 49,999</span>
+                        <span className="real_rate">(₹ 58,822</span>
                         <span className="discount_cent">15.00% OFF)</span>
                       </div>
                       <div></div>

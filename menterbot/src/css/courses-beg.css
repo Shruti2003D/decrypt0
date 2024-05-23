@@ -87,6 +87,8 @@
   color: #fff;
 }
 .course_title {
+  font-family: Helvetica;
+
   padding: auto;
   font-size: 1.4rem;
   margin: 1rem 0 0;
@@ -96,6 +98,7 @@
   padding: 0.5rem 0;
 }
 .course-instructor {
+  font-family: Futura, sans-serif;
   display: flex;
   gap: 1rem;
   color: #fff;
@@ -123,7 +126,7 @@
   background: #ffffff none;
   border: 1px solid var(--mbr);
   color: rgba(0, 0, 0, .6);
-  font-family: "Google Sans Text", Roboto, Arial, sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   margin: 0 .25em 0 0;
   padding: .78571429em 1.5em .78571429em;
   text-transform: none;
@@ -168,4 +171,28 @@
     font-size: 1rem;
   }
   
-  
+  .real_rate {
+    text-decoration: line-through;
+    padding-right: 9px;
+}
+.discount_cent {
+  font-weight: 700;
+}
+.course_rate {
+  padding: 0.5rem 0;
+}
+.discount_rate {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding-right: 1rem;
+}
+.rating-stars{
+  padding-right: 2px;
+}
+.instructor{
+  font-family: "Proxima Nova", sans-serif;
+
+}
+.share-button{
+  font-family: Futura, sans-serif;
+}
