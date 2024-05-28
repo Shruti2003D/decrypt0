@@ -1,0 +1,118 @@
+.top_heading_out {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.top_site_main {
+  color: inherit;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(45, 51, 57, .95);
+  min-height: 100px;
+}
+
+.top_site_main>.overlay-top-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5);
+}
+
+.top_site_main .page-title-wrapper {
+  padding-top: var(--thim-top-heading-padding-top, 50px);
+  padding-bottom: var(--thim-top-heading-padding-bottom,100px);
+  text-align: var(--thim-top-heading-title-align, left);
+  position: relative;
+  z-index: 1;
+  height:5px;
+}
+
+.breadcrumbs-wrapper {
+  font-size: var(--thim-breacrumb-font-size, 1em);
+  color: var(--thim-breacrumb-color, #666);
+  background-color: var(--thim-breacrumb-bg-color, transparent);
+}
+
+.top_site_main .page-title-wrapper .banner-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.top_site_main .page-title-wrapper .page-title {
+  color: inherit;
+  margin: 0;
+  line-height: 1;
+  text-transform: var(--thim-top-heading-title-font-text-transform, uppercase);
+  font-size: 3rem; /* Adjust this value to your desired font size */
+  font-weight: 100;
+  padding-left: 50px;
+  position: relative;
+}
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+  margin: 0;
+}
+
+.container {
+  width: 900px;
+  max-width: 100%;
+}
+
+.breadcrumbs-wrapper #breadcrumbs {
+  padding: 13px 0;
+  margin: 0;
+  font-size: 30px;
+  border-bottom: 1px solid var(--thim-breacrumb-border-color, #eee);
+}
+
+h1, h2, h3, h4, h5, h6, .thim-font-heading {
+  font-family: var(--thim-font-title-font-family);
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+.breadcrumbs-wrapper {
+  font-size: var(--thim-breacrumb-font-size, 1em);
+  color: var(--thim-breacrumb-color, #666);
+  background-color: var(--thim-breacrumb-bg-color, transparent);
+}
+
+.breadcrumbs-wrapper #breadcrumbs a {
+  line-height: 25px;
+  display: inline-block;
+  color: inherit;
+  margin-right: 12px;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+}
+.breadcrumbs-wrapper #breadcrumbs li {
+  line-height: 25px;
+  display: inline-block;
+  color: inherit;
+  list-style: none;
+}
+
+li {
+  text-align: -webkit-match-parent;
+}
+
+
