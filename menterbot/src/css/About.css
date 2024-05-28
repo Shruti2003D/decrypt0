@@ -26,14 +26,16 @@
   transition: color 0.3s ease; /* Smooth color transition */
   font-weight: bold;
 }
+
 .motivation-inner-box h2 {
   font-size: 24px; /* Increased font size */
   font-weight: bold; /* Bold text */
 }
+
 .motivation-inner-box h2 {
   font-size: 19px; /* Increased font size */
-  /* Bold text */
 }
+
 .motivation-box {
   background-color: #ff751a; /* Orange background for the outer box */
   padding: 20px;
@@ -66,6 +68,8 @@
 }
 
 .team-member {
+  display: flex;
+  flex-direction: column; /* Make it a flex container */
   background-color: #ff751a; /* Orange background for the outer box */
   padding: 20px;
   border-radius: 10px; /* Rounded corners */
@@ -81,6 +85,7 @@
 }
 
 .member-inner-box {
+  flex: 1; /* Make the inner box grow to fill the available space */
   background-color: #ffffff; /* White background for the inner box */
   padding: 20px;
   border-radius: 10px; /* Rounded corners */
