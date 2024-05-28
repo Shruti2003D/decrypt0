@@ -8,6 +8,7 @@ import Navbar from './Navbar/Navbar';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Careers from './Components/Career';
+import Services from './Components/services';
 import Courses from './Components/Courses';
 import Login from './Components/login';
 import Signup from './Components/signup';
@@ -19,6 +20,7 @@ import CyberForensics from './Components/courses/course1';
 import MastersInEthicalHacking from './Components/courses/course2';
 import LinuxWindowsPrivilegeEscalation from './Components/courses/course3';
 import BugBounty from './Components/courses/course4';
+
 function App() {
 
   return (
@@ -26,11 +28,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home/>}/>
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogsmain/>}/>
         
         <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<Careers />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/beginner" element={<CoursesBeg />} />
         <Route path="/courses/intermediate" element={<CoursesInt />} />
