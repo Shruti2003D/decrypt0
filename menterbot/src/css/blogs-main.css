@@ -1,0 +1,11 @@
+.blogs-container{
+    padding-top: 7rem;
+}
+.blogs-main h2{
+    font-size: 50px;
+    font-family: 'Helvetica', 'Proxima Nova', 'Futura', sans-serif;
+    display: block;
+    text-align: center;
+    color: #FF751A;
+    font-weight: bold;
+}

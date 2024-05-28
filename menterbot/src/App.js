@@ -8,26 +8,41 @@ import Navbar from './Navbar/Navbar';
 import About from './Components/About';
 import Contact from './Components/ContactUs';
 import Careers from './Components/Career';
+import Services from './Components/services';
 import Courses from './Components/Courses';
 import Login from './Components/login';
 import Signup from './Components/signup';
 import CoursesBeg from './Components/courses-beg';
 import CoursesInt from './Components/courses-int';
 import CoursesAdv from './Components/coursesadv';
+import Blogsmain from './Components/blogs-main';
+import CyberForensics from './Components/courses/course1';
+import MastersInEthicalHacking from './Components/courses/course2';
+import LinuxWindowsPrivilegeEscalation from './Components/courses/course3';
+import BugBounty from './Components/courses/course4';
 
 function App() {
+
   return (
     <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home/>}/>
         <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blogsmain/>}/>
+        
         <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<Careers />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/beginner" element={<CoursesBeg />} />
         <Route path="/courses/intermediate" element={<CoursesInt />} />
         <Route path="/courses/advanced" element={<CoursesAdv />} />
+        <Route path="/courses/cyber-forensics" element={<CyberForensics />} />
+        <Route path="/courses/masters-in-ethical-hacking" element={<MastersInEthicalHacking />} />
+        <Route path="/courses/linux-windows-privilege-escalation" element={<LinuxWindowsPrivilegeEscalation />} /> {/* Add new route */}
+        <Route path="/courses/bug-bounty" element={<BugBounty />} /> 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
