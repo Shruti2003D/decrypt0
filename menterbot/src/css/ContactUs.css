@@ -115,4 +115,190 @@ li {
   text-align: -webkit-match-parent;
 }
 
+.address-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.address-section .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.address-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.address-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  flex: 1 1 calc(33.333% - 40px);
+  margin: 10px;
+  text-align: center;
+  min-width: 400px; /* Ensures cards don't get too small on narrow screens */
+  height: 300px;
+  width: 300px;
+}
+
+.address-card .icon {
+  margin-bottom: 10px;
+}
+
+.address-card .icon svg {
+  color: #ff751a; /* Change the color of the icon */
+}
+
+.address-card h3 {
+  font-family: 'Proxima Nova', sans-serif;
+  margin-bottom: 10px;
+  font-size: 1.6rem; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the font bold */
+}
+
+.address-card p {
+  font-family: 'Futura', sans-serif; /* Use Futura for paragraph */
+  font-size: 1.2rem; /* Adjust the font size of the paragraph */
+  line-height: 1.6; /* Adjust line height as needed */
+}
+
+.address-card .social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.address-card .social-links a {
+  margin: 0 10px;
+  color: #ff751a; /* Change the color of the social icons */
+  font-size: 1rem; /* Adjust the font size of the social icons */
+}
+
+.address-card .social-links a svg {
+  border: 1px solid #ff751a; /* Add border to make icons outlined */
+  border-radius: 50%; /* Make border circular */
+  padding: 8px; /* Adjust padding as needed */
+}
+
+.address-card .social-links a:hover {
+  background-color: #007bff;
+  color: white; /* Change color on hover */
+}
+
+.address-card .social-links a:hover svg {
+  color: white; /* Change color on hover */
+}
+
+
+/* Contact Form Styling */
+.contact-form-section {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.contact-form-section .container {
+  display: flex;
+  justify-content: center;
+}
+
+.thim-ekits-heading-text-center {
+  margin-bottom: 40px;
+
+}
+
+.thim-ekits-heading-text-center .title {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.wpcf7-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.wpcf7-form p {
+  margin-bottom: 20px;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.wpcf7-form input[type="submit"] {
+  background-color: #ff751a;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  position: center;
+  margin-left: 230px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  
+}
+
+.wpcf7-form input[type="submit"]:hover {
+  background-color: #ff751a;
+
+}
+
+.wpcf7-response-output {
+  margin-top: 20px;
+  font-size: 1rem;
+  
+}
+
+/* Spinner */
+.has-spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.has-spinner .spinner {
+  border: 2px solid #fff;
+  border-top: 2px solid #007bff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 0.8s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .wpcf7-form input[type="text"],
+  .wpcf7-form input[type="email"],
+  .wpcf7-form textarea {
+    font-size: 0.9rem;
+  }
+}
+
+
 
