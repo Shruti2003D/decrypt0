@@ -20,7 +20,8 @@ import CyberForensics from './Components/courses/course1';
 import MastersInEthicalHacking from './Components/courses/course2';
 import LinuxWindowsPrivilegeEscalation from './Components/courses/course3';
 import BugBounty from './Components/courses/course4';
-
+import Career from './Components/Career';
+import JobDetails from './Components/JobDetails'
 function App() {
 
   return (
@@ -45,6 +46,7 @@ function App() {
         <Route path="/courses/bug-bounty" element={<BugBounty />} /> 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/job-details" element={<JobDetails />} />
       </Routes>
     </Router>
   );

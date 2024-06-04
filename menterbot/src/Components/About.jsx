@@ -10,6 +10,7 @@ const About = () => {
   let { id } = useParams();
 
   return (
+    <>
     <section className="about-us-section">
       <h1 className="about-us-title">About Us</h1>
       <div className="motivation-box">
@@ -66,8 +67,10 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+     
     </section>
+    <Footer></Footer>
+</>
 
   );
 };
