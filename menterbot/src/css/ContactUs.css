@@ -1,62 +1,65 @@
-.top_heading_out {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.contact-section {
+  /* margin-top: 6%; */
+  padding-top: 6%;
+  font-family: 'Helvetica', 'Proxima Nova', 'Futura', sans-serif;
+  background-color: #ffffff;
 }
 
-.top_site_main {
-  color: inherit;
+.contact-section-padding {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 14%;
+  margin-right: 14%;
+}
+
+.contact-header {
+  padding: 50px 0;
   position: relative;
-  background-size: cover;
-  background-position: center center;
-  background-color: rgba(45, 51, 57, .95);
-  min-height: 100px;
 }
 
-.top_site_main>.overlay-top-header {
+.background-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, .5);
-}
-
-.top_site_main .page-title-wrapper {
-  padding-top: var(--thim-top-heading-padding-top, 50px);
-  padding-bottom: var(--thim-top-heading-padding-bottom,100px);
-  text-align: var(--thim-top-heading-title-align, left);
-  position: relative;
+  background-image: url('https://eduma.thimpress.com/demo-main/wp-content/uploads/sites/95/2022/11/Eduma-cover-banner-17.jpg');
+  background-size: cover;
+  background-position: center;
   z-index: 1;
-  height:5px;
 }
 
-.breadcrumbs-wrapper {
-  font-size: var(--thim-breacrumb-font-size, 1em);
-  color: var(--thim-breacrumb-color, #666);
-  background-color: var(--thim-breacrumb-bg-color, transparent);
+.background-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Adjust the alpha value for the desired darkness */
+  z-index: 1;
 }
 
-.top_site_main .page-title-wrapper .banner-wrapper {
-  overflow: hidden;
+.contact-title-container {
   position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: left;
+  padding-left: 14%;
 }
 
-.top_site_main .page-title-wrapper .page-title {
-  color: inherit;
-  margin: 0;
-  line-height: 1;
-  text-transform: var(--thim-top-heading-title-font-text-transform, uppercase);
-  font-size: 3rem; /* Adjust this value to your desired font size */
-  font-weight: 100;
-  padding-left: 50px;
-  position: relative;
+.vertical-line {
+  margin-top: 0.5rem;
+  width: 5px;
+  height: 3rem;
+  background-color: #FF751A;
+  margin-right: 10px;
 }
 
-blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
-  margin: 0;
+.contact-title {
+  color: white;
+  font-size: 3rem;
 }
 
 .container {
@@ -67,7 +70,7 @@ blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
 .breadcrumbs-wrapper #breadcrumbs {
   padding: 13px 0;
   margin: 0;
-  font-size: 30px;
+  font-size: 25px;
   border-bottom: 1px solid var(--thim-breacrumb-border-color, #eee);
 }
 

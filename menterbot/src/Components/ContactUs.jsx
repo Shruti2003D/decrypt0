@@ -7,32 +7,25 @@ import Footer from "./Footer";
 
 const ContactUs = ({ data, settings }) => {
   return (
-    <section>
-      <div className="top_heading_out">
-        <div
-          className="top_site_main"
-          style={{
-            color: 'rgb(255, 255, 255)',
-            backgroundImage: 'url("https://eduma.thimpress.com/demo-main/wp-content/uploads/sites/95/2022/11/Eduma-cover-banner-17.jpg")',
-            paddingTop: '400px',
-          }}
-        >
-          <div className="overlay-top-header" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}></div>
-          <div className="page-title-wrapper">
-            <div className="banner-wrapper container">
-              <h1 className="page-title">Contact Us</h1>
-            </div>
-          </div>
-        </div>
+    <section className="contact-section">
+
+    <div className="contact-header">
+      <div className="background-overlay"></div>
+      <div className="contact-title-container">
+        <div className="vertical-line"></div>
+        <h1 className="contact-title">Contact Us</h1>
+      </div>
+      </div>
+  
         <div className="breadcrumbs-wrapper">
           <div className="container">
             <ul className="breadcrumbs" id="breadcrumbs">
-              <li><a href="/">Home</a></li>
+              <li><a href="/">Home |</a></li>
               <li>Contact</li>
             </ul>
           </div>
         </div>
-      </div>
+      
 
       <div className="address-section">
         <div className="container">
