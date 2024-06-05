@@ -1,56 +1,64 @@
-.dummyspace{
-    height:8rem;
-}
-/* courses-beg.css */
+/* courses-int.css */
 
-.center{
-    max-width: 984px;
-    padding: 0 1 rem;
-    margin: auto;
+.dummyspace {
+  height: 8rem;
 }
+
 /* Add styles for .track-page-sub-heading */
 .track-page-sub-heading {
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 1.5rem;
-    color: #FF751A; /* Set color to custom CSS variable --mbr */
-    font-weight: 758;
-    margin-top: 0.5rem;
-    margin-left: 25px;
-    margin-bottom: 0; /* Reset margin-bottom */
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 1.5rem;
+  color: #FF751A; /* Set color to custom CSS variable --mbr */
+  font-weight: 758;
+  margin-top: 0.5rem;
+  margin-left: 25px;
+  margin-bottom: 0; /* Reset margin-bottom */
 }
 
 /* Override default h2 styles */
 .section h1 {
-    font-family: Helvetica;
-    font-size: 69px;
-    color: #FF751A; 
-    font-weight: 700;
-    text-align: center;
+  font-family: Helvetica;
+  font-size: 69px;
+  color: #FF751A; 
+  font-weight: 700;
+  text-align: center;
 }
 
 /* Reset default styles for all elements */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: inherit;
-    font-style: inherit;
-    font-weight: inherit;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
 }
-/* courses-beg.css */
 
-/* Add styles for .course-card-container */
-.course-card-container {
-    display: flex;
-    justify-content: space-between; /* Adjust as needed */
-    padding: 15px;
-  }
-  
-  .course_cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+/* courses-int.css */
+
+.max-w-screen-xl {
+  max-width: none; /* Remove max-width restriction */
 }
+
+.course-card-container {
+  display: flex;
+  justify-content: center; /* Center the card horizontally */
+  padding: 15px;
+}
+
+/* For big screens, adjust the layout */
+@media (min-width: 1024px) {
+  .course-card-container {
+    padding-top: 100px; /* Adjust the top padding as needed */
+  }
+}
+
+.course_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
 .course_card {
   width: 450px;
   padding: 1rem;
@@ -59,6 +67,7 @@
   color: #fff;
   box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important;
 }
+
 .course_details {
   height: 100%;
   min-width: 24.5rem;
@@ -75,6 +84,7 @@
   border-radius: 0.5rem;
   display: block;
 }
+
 .course_img1 {
   background: url('../assets/cyberforsenic.png') center center; /* Adjust the path if necessary */
   background-size: cover;
@@ -82,19 +92,23 @@
   border-radius: 0.5rem;
   display: block;
 }
+
 .course_details_in {
   padding: auto;
   color: #fff;
 }
+
 .course_title {
   padding: auto;
   font-size: 1.4rem;
   margin: 1rem 0 0;
   font-weight: 900;
 }
+
 .course_rate {
   padding: 0.5rem 0;
 }
+
 .course-instructor {
   display: flex;
   gap: 1rem;
@@ -102,9 +116,9 @@
   align-items: center;
   align-content: center;
 }
+
 .course-btn-flex {
   display: flex;
-  /* background: red; */
   margin-top: 1rem;
   align-items: center;
   align-content: center;
@@ -140,49 +154,53 @@
   -webkit-tap-highlight-color: transparent;
   font-size: 1rem;
 }
+
 .white-orange {
   background-color: #fff !important;
   color: #FF751A !important;
 }
 
-  /* Add styles for .course-card */
-  .course-card {
-    
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    width: calc(50% - 10px); /* Adjust width and spacing as needed */
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 10px; /* Adjust margin to control space between cards */
-  }
-  
-  .course-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .course-card p {
-    font-size: 1rem;
-  }
-  
-  .real_rate {
-    text-decoration: line-through;
-    padding-right: 9px;
+/* Add styles for .course-card */
+.course-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: calc(50% - 10px); /* Adjust width and spacing as needed */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Adjust margin to control space between cards */
 }
+
+.course-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-card p {
+  font-size: 1rem;
+}
+
+.real_rate {
+  text-decoration: line-through;
+  padding-right: 9px;
+}
+
 .discount_cent {
   font-weight: 700;
 }
+
 .course_rate {
   padding: 0.5rem 0;
 }
+
 .discount_rate {
   font-size: 1.1rem;
   font-weight: 700;
   padding-right: 1rem;
 }
-.rating-stars{
+
+.rating-stars {
   padding-right: 2px;
 }
