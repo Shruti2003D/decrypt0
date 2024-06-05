@@ -6,7 +6,7 @@
 
 .Blogs h2 {
   font-size: 2.25rem;
-  font-family: Helvetica;/* Multiple font families */
+  font-family: Helvetica; /* Multiple font families */
   display: block;
   margin: 2rem 0px 2rem; 
   text-align: center;
@@ -46,6 +46,7 @@
   margin-right: 13%;
   padding-bottom: 1%;
   padding-top: 1%;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -53,14 +54,8 @@
   background-color: #FD9066;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 50px;
-  width: calc(33.33% - 10px); /* Adjusted width calculation */
-  margin-right: 1em;
-  margin-left: 1em;
-}
-
-/* Remove margin from the last card to prevent it from creating unnecessary space */
-.card:last-child {
-  margin-right: 0;
+  width: calc(33.33% - 20px); /* Adjusted width calculation */
+  margin: 10px;
 }
 
 .card a {
@@ -91,4 +86,68 @@
   left: 20px; 
   font-size: 14px;
   color: #666;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .cards {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .card {
+    width: calc(50% - 20px); /* Two cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .card {
+    width: 100%; /* One card per row */
+  }
+
+  .card {
+    padding: 30px;
+  }
+
+  .butt {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .butt button {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Blogs h2 {
+    font-size: 1.75rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  .butt button {
+    font-size: 12px;
+    padding: 10px;
+  }
 }
