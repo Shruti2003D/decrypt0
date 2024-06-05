@@ -1,12 +1,12 @@
 import React from 'react';
 import '../css/blogs.css';// Assuming your CSS file is named blogs.css
-
+import { Link } from 'react-router-dom';
 const Blogs = () => {
   return (
     <div className="Blogs">
-     
+
       <h2>Read From Our Latest Blogs.</h2>
-      
+
       <div className='cards'>
         <div className="card">
           <span className="date">18 April 2024</span>
@@ -28,12 +28,11 @@ const Blogs = () => {
         </div>
       </div>
 
-      <div className='butt'>
-        <a href="#" target="_blank">
-            <button>READ MORE</button>
-        </a>
-      </div>
-    </div>    
+      <Link className="butt" to="/blogs" target="_blank">
+        <button>READ MORE</button>
+      </Link>
+
+    </div>
   );
 };
 
