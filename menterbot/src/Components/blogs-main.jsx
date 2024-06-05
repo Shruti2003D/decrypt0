@@ -6,13 +6,13 @@ const Blogsmain = () => {
   return (
     <section className="blogs-section">
 
-      <div className="blog-header">
+       <div className="blog-header">
         <div className="background-overlay"></div>
         <div className="blog-title-container">
           <div className="vertical-line"></div>
           <h1 className="blog-title">Blogs</h1>
         </div>
-      </div>
+      </div> 
       <div className='blogs-section-padding'>
         {/* Sampe Part 1 */}
         <div className='blog-post-summary'>
