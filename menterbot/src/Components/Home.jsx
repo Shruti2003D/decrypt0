@@ -10,7 +10,6 @@ import '../css/home.css';
 
 const Home = () => {
     return (
-      
       <div className="Home">
         <Navbar />
         <Banner />
@@ -29,7 +28,6 @@ const Home = () => {
         <Partner/>
         <Footer />
       </div>
-      
     );
   };
   

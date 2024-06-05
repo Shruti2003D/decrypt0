@@ -55,7 +55,6 @@ const JobDetails = () => {
             <p><strong>How to Apply:</strong> Send your updated resume to <a href="mailto:hiring@mentorbot.in">hiring@mentorbot.in</a>.</p>
             <p>Please mention "Application Development Trainer - [Your Name]" in the subject line. (Pdf only). Highlight your experience in app development and previous training engagements, if any.</p>
             <p>We are an equal-opportunity employer and value diversity at our company. We do not discriminate based on race, religion, colour, national origin, gender, sexual orientation, age, marital status, or disability status. Join us in shaping the future of application development training! 🚀</p>
-            {/* <a href="mailto:hiring@mentorbot.in" className="button orange-btn">Apply for Above Role</a> */}
             <button className='button orange-btn' onClick={() => setOpenADTPage(true)}>Apply for Above Role</button>
             {openAdtPage && (
               <ApplyAdt onClose={() => setOpenADTPage(false)} />
