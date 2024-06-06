@@ -6,7 +6,6 @@ import img3 from '../Components/Services/img3.webp';
 import img4 from '../Components/Services/img4.webp';
 import Footer from './Footer';
 
-
 const Services = () => {
   return (
     <>
