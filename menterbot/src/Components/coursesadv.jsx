@@ -34,7 +34,7 @@ const CoursesAdv = () => {
               <p className="course-instructor text-sm">Instructor: <span className="font-bold">Abhishek Chouriya</span></p>
             </div>
             <div className="course-btn-flex flex justify-between mt-4">
-              <Link className="button white-orange bg-white text-orange-500 font-bold py-2 px-4 rounded" to="/courses/linux-windows-privilege-escalation">Read more</Link>
+              <Link className="button white-orange bg-white text-orange-500 font-bold py-2 px-4 rounded" to="/courses/bug-bounty">Read more</Link>
               <a className="share-button flex items-center" href="#" data-title="Linux/ Windows Privilege Escalation" data-url="https://mentorbot.in/courses/linux-windows-privilege-escalation">
                 <span>Share</span>
                 <img className="course_share ml-2" src="https://mentorbot.in/assets/white_share.svg" alt="Share" />
