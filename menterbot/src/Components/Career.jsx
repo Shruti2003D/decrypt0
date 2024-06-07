@@ -48,13 +48,6 @@ const jobListings = [
     description: "We're excited to have you on board as a Campus Ambassador. As a vital member of our team, your role is to bridge the gap between our organization and your campus community. Your enthusiasm and dedication will play a crucial role in representing our brand and building strong relationships on campus.",
     imageUrl: carrer3,
     route: "/job-details"
-  },
-  {
-    title: "Campus Ambassador",
-    date: "04 June 2024",
-    description: "We're excited to have you on board as a Campus Ambassador. As a vital member of our team, your role is to bridge the gap between our organization and your campus community. Your enthusiasm and dedication will play a crucial role in representing our brand and building strong relationships on campus.",
-    imageUrl: carrer3,
-    route: "/job-details"
   }
 ];
 
