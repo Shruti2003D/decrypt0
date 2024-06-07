@@ -1,15 +1,53 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../css/services.css';
+import img1 from '../Components/Services/img1.webp';
+import img2 from '../Components/Services/img2.webp';
+import img3 from '../Components/Services/img3.webp';
+import img4 from '../Components/Services/img4.webp';
+import Footer from './Footer';
 
 const Services = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
   return (
-    <div>
-      <h2>this is service page</h2>
-      <p>Feel free to reach out to us for any services...</p>
-      <h2>=services page</h2>
-      <p>Feel free to reach out to us for any services...</p><h2>services</h2>
-      <p>Feel free to reach out to us for any services...</p><h2>services</h2>
-      <p>Feel free to reach out to us for any services...</p>
-    </div>
+    <>
+      <div className='background-container'>
+        <div className='content'>
+          <h1>Our Services</h1>
+          <p><a className='menter'>MentorBot</a> is an innovative cyber defense platform offering fast and effective <br /> remote monitoring solutions for securing your environment.</p>
+          <p>The core role of MentorBot is to enhance cyber defense practices. </p>
+          <p className='para'>"Empower your security strategy with MentorBot."</p>
+        </div>
+        <div className='cards-container'>
+          <div className='card'>
+            <img src={img1} alt='img1' />
+            <h2 onClick={() => handleNavigation('../services1')}>Offensive-Penetration Testing</h2>
+            <p>Simulated cyberattacks on systems, networks, and applications to identify and exploit vulnerabilities before malicious hackers can.</p>
+          </div>
+          <div className='card'>
+            <img src={img2} alt='img2' />
+            <h2>Defensive-Penetration Testing</h2>
+            <p>Focuses on strengthening an organization’s defenses by identifying and mitigating vulnerabilities to ensure robust security measures.</p>
+          </div>
+          <div className='card'>
+            <img src={img3} alt='img3' />
+            <h2>Auditing</h2>
+            <p>Auditing involves assessing an organization's security controls, policies, and compliance with standards to ensure effectiveness and regulatory adherence.</p>
+          </div>
+          <div className='card'>
+            <img src={img4} alt='img4' />
+            <h2>Cyber forensic</h2>
+            <p>Investigates and analyzes cyber incidents to uncover evidence, understand attacks, and aid in legal proceedings.</p>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 

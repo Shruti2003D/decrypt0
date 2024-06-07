@@ -1,86 +1,101 @@
-/* Testimonials container */
-@font-face {
-  font-family: "Proxima Nova";
-  src: url('path/to/proxima-nova.woff2') format('woff2'),
-       url('path/to/proxima-nova.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+.examples {
+  background-color: #e2eaee;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: -60px;
+  padding-top: 50px;
+  padding-bottom: 150px;
 }
 
-.testimonials-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 20rem;
-
+element.style {
+  margin-top: 50px;
+  --pause-on-hover: running;
+  --pause-on-click: running;
+  --width: 100%;
+  --transform: none;
 }
 
-/* Testimonial card container */
-.testimonial-card {
-  position: relative; /* To ensure proper stacking of elements */
-  overflow: hidden; /* Hide any overflow from child elements */
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  padding: 20rem;
-  text-align: center;
+style attribute {
+  margin-top: 50px;
+  --pause-on-hover: running;
+  --pause-on-click: running;
+  --width: 100%;
+  --transform: none;
+}
+
+.header {
+  font-size: 40px;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+.marquee-container {
+  overflow-x: hidden !important;
+  display: flex !important;
+  flex-direction: row !important;
+  position: relative;
+  width: var(--width);
+  transform: var(--transform);
+}
+
+.marquee {
+  flex: 0 0 auto;
+  min-width: var(--min-width);
+  z-index: 1;
   display: flex;
-  margin-top: 4rem;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  animation: scroll var(--duration) linear var(--delay) var(--iteration-count);
+  animation-play-state: var(--play);
+  animation-delay: var(--delay);
+  animation-direction: var(--direction);
 }
 
-/* Avatar image */
-.testimonial-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 1rem;
-  transition: transform 0.5s ease; /* Smooth transition for zoom effect */
+.initial-child-container {
+  flex: 0 0 auto;
+  display: flex;
+  min-width: auto;
+  flex-direction: row;
 }
 
-.testimonial-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.child {
+  transform: var(--transform);
 }
 
-/* Name and review */
-.testimonial-name,
-.testimonial-review {
-  transition: transform 0.5s ease; /* Smooth transition for zoom effect */
+.card {
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 0 30px;
+  padding: 20px;
 }
 
-/* Apply zoom effect on hover */
-.testimonial-card:hover .testimonial-avatar {
-  transform: scale(2.0); /* Zoom in the avatar image on hover */
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
 }
 
-.testimonial-card:hover .testimonial-name,
-.testimonial-card:hover .testimonial-review {
-  transform: scale(2.0); /* Zoom in the name and review on hover */
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
 }
 
-/* Custom text color */
-.text-orange-500 {
-  color: white;
+Home {
+  text-align: center;
+  color: #2e353b;
 }
-
-/* Testimonials title */
-.text-4xl {
-  font-size: 5rem;
-  font: Helvetica;
-  line-height: 4rem;
-  margin-top: 10rem;
-  padding-top: 5rem;
-  margin-bottom: 10rem;
-}
-
-.testimonial-content {
-  font-family: "Proxima Nova", sans-serif;
-}
-
-

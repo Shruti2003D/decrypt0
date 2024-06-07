@@ -1,7 +1,7 @@
-import Header from "../header/Header";
+//import Header from "../header/Header";
 import Navbar from "../Navbar/Navbar";
 import Banner from "../Banner/Banner";
-import Testimonials from "./Testimonials";
+import Clients from "./Clients";
 import Blogs from "./Blogs";
 import Partner from "./Partner";
 import Footer from "./Footer";
@@ -10,7 +10,6 @@ import '../css/home.css';
 
 const Home = () => {
     return (
-      
       <div className="Home">
         <Navbar />
         <Banner />
@@ -24,12 +23,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <Testimonials />
+        <Clients />
         <Blogs />
         <Partner/>
         <Footer />
       </div>
-      
     );
   };
   
