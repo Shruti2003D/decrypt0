@@ -1,97 +1,87 @@
-// LinuxWindowsPrivilegeEscalation.jsx
 import React from 'react';
-import '../courses/css/course3.css'
 import Footer from '../Footer';
 import LocalImage3 from '../courses/courseint1.png';
 
-const LinuxWindowsPrivilegeEscalation = () => {
+const CyberForensics = () => {
   return (
-    <div>
-      <div className="courses-beg-page">
-        <div className="dummyspace"></div>
-        <div className="center">
-          <div className="section">
-            <div>
-              <h2 className="track-page-sub-heading">Category</h2>
-              <h1 className="teams-page-heading-one margin-top-2rem margin-2rem">
-                Intermediate-level
-              </h1>
-              <section className="course-band">
-                <div className="center">
-                  <div className="blog-article-head">
-                    <h2 className="mb-subheading blog-band-color">Linux/ Windows Privilege Escalation</h2>
-                  </div>
+    <div className="bg-white">
+      <div className="h-32"></div>
+      <div className="max-w-5xl px-4 mx-auto">
+        <div className="section">
+          <div>
+            <h2 className="text-left text-2xl font-bold mb-4">Category</h2>
+            <h1 className="text-4xl font-bold mt-8 mb-8">Intermediate-level</h1>
+            <section className="bg-orange-600 text-white py-4 my-4">
+              <div className="max-w-5xl px-4 mx-auto">
+                <div>
+                  <h2 className="text-left text-4xl font-extrabold mb-2 text-white">Linux/ Windows Privilege Escalation</h2>
                 </div>
-              </section>
-              <section>
-                <div className="box-shade margin-1rem">
+              </div>
+            </section>
+            <section>
+              <div className="shadow-lg mb-4">
+                <img
+                  className="rounded-md"
+                  width="100%"
+                  src={LocalImage3}
+                  alt="Master's in Ethical Hacking"
+                />
+                <p></p>
+              </div>
 
-                  <img className="out-course-img" width="100%" src={LocalImage3} alt="Master's in Ethical Hacking" />
-
-                  <p></p>
-                </div>
-
-                <div className="course-right-left">
-                  <div className="course-left">
-                    <div className="course-details-box margin-1rem">
-                      <h2 class="font-weigh"> What you will learn</h2>
-                      <div className="text">
-                        Do this course if you want to improve your Capture the Flag skills and get ready for certifications like the OSCP. If your Senior Security Analyst, need to conduct comperihensive testing or Grey Box Pentesting.
-                      </div>
-
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="course-left">
+                  <div className="shadow-lg p-4 rounded-md mb-4">
+                    <h2 className="text-xl font-extrabold text-orange-600 mb-4"> What you will learn</h2>
+                    <div className="text-base font-sans">
+                    Do this course if you want to improve your Capture the Flag skills and get ready for certifications like the OSCP. If your Senior Security Analyst, need to conduct comperihensive testing or Grey Box Pentesting.
                     </div>
-                    <div className="course-details-box margin-1rem">
-                      <h2 className="font-weigh">Who is it for</h2>
-                      <div>
-                        <p className="text">
-                          Penetration Testers.<br />
+                  </div>
+                  <div className="shadow-lg p-4 rounded-md mb-4">
+                    <h2 className="text-xl font-extrabold text-orange-600 mb-4">Who is it for</h2>
+                    <div>
+                      <p className="text-base font-sans">
+                      Penetration Testers.<br />
                           Cyber Security Analysts.<br />
                           Cyber Security Students who want to become an advanced PenTester.<br />
                           Students interested in how attackers escalate privileges on modern Windows endpoints.<br />
                           Anyone who starves into learning hacking and security.<br />
-                        </p>
-                      </div>
-                    </div>
-                    <div className="course-details-box margin-1rem">
-                      <h2 class="font-weigh"> Who is your Instructor</h2>
-                      <div class="margin-1rem" className="text">Abhishek Chouriya</div>
-                      <div>
-                        <p className="text">cyber security trainer</p>
-                      </div>
-
+                      </p>
                     </div>
                   </div>
-                  <div className="course-right">
-                    <div className="course-details-box margin-1rem">
-                      <div className="course_rate orange">
-                        <h2 class="font-weigh">
-                          Price:
-                          <span className="discount_rate"> ₹ 6000</span>
-                          <span className="real_rate">(₹ 7500</span>
-                          <span classn="discount_cent">50.00% OFF)</span>
-                        </h2>
-                      </div>
-                      <div className="margin-1rem">
-                        <a className="button orange-btn" href="#">
-                          Enroll now
-                        </a>
-                        <a className="button orange-btn margin-1rem" target="_blank" href="#">
-                          Let's talk
-                        </a>
-                        <div>
-
-                        </div>
-
-                      </div>
-
-
+                  <div className="shadow-lg p-4 rounded-md mb-4">
+                    <h2 className="text-xl font-extrabold text-orange-600 mb-4"> Who is your Instructor</h2>
+                    <div className="text-base font-sans mb-4">Abhishek Chouriya</div>
+                    <div>
+                      <p className="text-base font-sans">cyber security trainer</p>
                     </div>
-                    <div className="course-details-box margin-1rem">
-                      <div className="margin-1rem">
-                        <h2 className="font-weigh">Syllabus</h2>
-                        <div>
-                          <p className="text">
-                            Linux Privilege Escalation
+                  </div>
+                </div>
+                <div className="course-right">
+                  <div className="shadow-lg p-4 rounded-md mb-4">
+                    <div className="text-xl font-extrabold text-orange-600">
+                      <h2 className="text-xl font-extrabold text-orange-600 mb-4">
+                        Price:
+                        <span className="text-lg font-bold pr-4">₹ 6000</span>
+                        <span className="line-through">(₹ 7500</span>
+                        <span className="font-bold">50.00% OFF)</span>
+                      </h2>
+                    </div>
+                    <div className="mb-4">
+                      <a className="inline-block cursor-pointer text-center border border-solid border-orange-600 bg-orange-600 text-white py-2 px-6 rounded mb-4 mr-2 font-bold" href="#">
+                        Enroll now
+                      </a>
+                      <a className="inline-block cursor-pointer text-center border border-solid border-orange-600 bg-orange-600 text-white py-2 px-6 rounded mb-4 mr-2 font-bold" target="_blank" href="#">
+                        Let's talk
+                      </a>
+                    </div>
+                  </div>
+                  <div className="shadow-lg p-4 rounded-md mb-4">
+                    <div className="mb-4">
+                      <h2 className="text-xl font-extrabold text-orange-600 mb-4">Syllabus</h2>
+                      <div>
+                        <p className="text-base font-sans">
+                        Linux Privilege Escalation
                             M1-Linux Fundamental<br />
                             M2-Writable Files<br />
                             M3-Misconfigured NFS<br />
@@ -114,27 +104,22 @@ const LinuxWindowsPrivilegeEscalation = () => {
                             M7-Bypass ACL<br />
                             M8-Automated Tools<br />
                             <br></br>
-                          </p>
-                        </div>
-                        <div>
-                          <a className="button orange-btn" href="#">Download Here</a>
-                        </div>
-
+                        </p>
+                      </div>
+                      <div>
+                        <a className="inline-block cursor-pointer text-center border border-solid border-orange-600 bg-orange-600 text-white py-2 px-6 rounded mb-4 mr-2 font-bold" href="#">Download Here</a>
                       </div>
                     </div>
                   </div>
                 </div>
-              </section>
-            </div>
-
+              </div>
+            </section>
           </div>
         </div>
-
-        <Footer /> {/* Include Footer component */}
       </div>
+      <Footer /> {/* Include Footer component */}
     </div>
-
   );
 };
 
-export default LinuxWindowsPrivilegeEscalation;
+export default CyberForensics;
