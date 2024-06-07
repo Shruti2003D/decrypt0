@@ -21,7 +21,11 @@ import MastersInEthicalHacking from './Components/courses/course2';
 import LinuxWindowsPrivilegeEscalation from './Components/courses/course3';
 import BugBounty from './Components/courses/course4';
 import Career from './Components/Career';
-import JobDetails from './Components/JobDetails'
+import JobDetails from './Components/JobDetails';
+import ServicesOffensive from './Components/servicesoffensive';
+import ServicesDefensive from './Components/servicesdefensive';
+import ServicesAuditing from './Components/servicesauditing';
+import ServicesCyber from './Components/servicescyber'
 function App() {
 
   return (
@@ -47,6 +51,11 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/job-details" element={<JobDetails />} />
+
+        <Route path="/services/offensive-penetration-testing" element={<ServicesOffensive />} />
+        <Route path="/services/defensive-penetration-testing" element={<ServicesDefensive />} />
+        <Route path="/services/auditing" element={<ServicesAuditing />} />
+        <Route path="/services/cyber-forensic" element={<ServicesCyber />} />
       </Routes>
     </Router>
   );

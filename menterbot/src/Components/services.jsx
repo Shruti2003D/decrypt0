@@ -1,12 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../css/services.css';
 import img1 from '../Components/Services/img1.webp';
 import img2 from '../Components/Services/img2.webp';
 import img3 from '../Components/Services/img3.webp';
 import img4 from '../Components/Services/img4.webp';
 import Footer from './Footer';
-
+import { Link } from 'react-router-dom';
 const Services = () => {
   const navigate = useNavigate();
 
@@ -26,23 +25,31 @@ const Services = () => {
         <div className='cards-container'>
           <div className='card'>
             <img src={img1} alt='img1' />
-            <h2 onClick={() => handleNavigation('../services1')}>Offensive-Penetration Testing</h2>
-            <p>Simulated cyberattacks on systems, networks, and applications to identify and exploit vulnerabilities before malicious hackers can.</p>
+            <Link to="/services/offensive-penetration-testing" target="_blank">
+              <h2>Offensive-Penetration Testing</h2>
+              <p>Simulated cyberattacks on systems, networks, and applications to identify and exploit vulnerabilities before malicious hackers can.</p>
+            </Link>
           </div>
           <div className='card'>
             <img src={img2} alt='img2' />
-            <h2>Defensive-Penetration Testing</h2>
-            <p>Focuses on strengthening an organization’s defenses by identifying and mitigating vulnerabilities to ensure robust security measures.</p>
+            <Link to="/services/defensive-penetration-testing" target="_blank">
+              <h2>Defensive-Penetration Testing</h2>
+              <p>Focuses on strengthening an organization’s defenses by identifying and mitigating vulnerabilities to ensure robust security measures.</p>
+            </Link>
           </div>
           <div className='card'>
             <img src={img3} alt='img3' />
-            <h2>Auditing</h2>
-            <p>Auditing involves assessing an organization's security controls, policies, and compliance with standards to ensure effectiveness and regulatory adherence.</p>
+            <Link to="/services/auditing" target="_blank">
+              <h2>Auditing</h2>
+              <p>Auditing involves assessing an organization's security controls, policies, and compliance with standards to ensure effectiveness and regulatory adherence.</p>
+            </Link>
           </div>
           <div className='card'>
             <img src={img4} alt='img4' />
-            <h2>Cyber forensic</h2>
-            <p>Investigates and analyzes cyber incidents to uncover evidence, understand attacks, and aid in legal proceedings.</p>
+            <Link to="/services/cyber-forensic" target="_blank">
+              <h2>Cyber forensic</h2>
+              <p>Investigates and analyzes cyber incidents to uncover evidence, understand attacks, and aid in legal proceedings.</p>
+            </Link>
           </div>
         </div>
       </div>
