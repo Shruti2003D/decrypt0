@@ -81,18 +81,18 @@ const Navbar = () => {
         </div>
         <div className="navbar-container">
           <div className="navbar-links">
-            <Link to="/home" className="navbar-text hover-effect">Home</Link>
-            <Link to="/blogs" className="navbar-text hover-effect">Blogs</Link>
-            <Link to="/about" className="navbar-text hover-effect">About</Link>
-            <Link to="/contact" className="navbar-text hover-effect">Contact</Link>
-            <Link to="/careers" className="navbar-text hover-effect">Careers</Link>
-            <Link to="/services" className="navbar-text hover-effect">Services</Link>
+            <Link to="/home" className="navbar-text hover-effect" >Home</Link>
+            <Link to="/blogs" className="navbar-text hover-effect" target="_blank">Blogs</Link>
+            <Link to="/about" className="navbar-text hover-effect" target="_blank">About</Link>
+            <Link to="/contact" className="navbar-text hover-effect" target="_blank">Contact</Link>
+            <Link to="/careers" className="navbar-text hover-effect" target="_blank">Careers</Link>
+            <Link to="/services" className="navbar-text hover-effect" target="_blank">Services</Link>
             <div className="dropdown">
               <span className="navbar-text hover-effect">Courses</span>
               <div className="dropdown-content">
-                <Link to="/courses/beginner" className="navbar-text">Beginner Level</Link>
-                <Link to="/courses/intermediate" className="navbar-text">Intermediate Level</Link>
-                <Link to="/courses/advanced" className="navbar-text">Advanced Level</Link>
+                <Link to="/courses/beginner" className="navbar-text" target="_blank">Beginner Level</Link>
+                <Link to="/courses/intermediate" className="navbar-text" target="_blank">Intermediate Level</Link>
+                <Link to="/courses/advanced" className="navbar-text" target="_blank">Advanced Level</Link>
               </div>
             </div>
           </div>
