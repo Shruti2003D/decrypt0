@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './App.css';
@@ -20,7 +19,6 @@ import CyberForensics from './Components/courses/course1';
 import MastersInEthicalHacking from './Components/courses/course2';
 import LinuxWindowsPrivilegeEscalation from './Components/courses/course3';
 import BugBounty from './Components/courses/course4';
-import Career from './Components/Career';
 import JobDetails from './Components/JobDetails';
 import ServicesOffensive from './Components/servicesoffensive';
 import ServicesDefensive from './Components/servicesdefensive';
