@@ -28,7 +28,7 @@ const Blogs = () => {
         </div>
       </div>
 
-      <Link className="butt" to="/blogs" target="_blank">
+      <Link className="butt" to="/blogs">
         <button>READ MORE</button>
       </Link>
 

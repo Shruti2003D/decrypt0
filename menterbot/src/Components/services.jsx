@@ -25,28 +25,28 @@ const Services = () => {
         <div className='cards-container'>
           <div className='card'>
             <img src={img1} alt='img1' />
-            <Link to="/services/offensive-penetration-testing" target="_blank">
+            <Link to="/services/offensive-penetration-testing" >
               <h2>Offensive-Penetration Testing</h2>
               <p>Simulated cyberattacks on systems, networks, and applications to identify and exploit vulnerabilities before malicious hackers can.</p>
             </Link>
           </div>
           <div className='card'>
             <img src={img2} alt='img2' />
-            <Link to="/services/defensive-penetration-testing" target="_blank">
+            <Link to="/services/defensive-penetration-testing">
               <h2>Defensive-Penetration Testing</h2>
               <p>Focuses on strengthening an organization’s defenses by identifying and mitigating vulnerabilities to ensure robust security measures.</p>
             </Link>
           </div>
           <div className='card'>
             <img src={img3} alt='img3' />
-            <Link to="/services/auditing" target="_blank">
+            <Link to="/services/auditing" >
               <h2>Auditing</h2>
               <p>Auditing involves assessing an organization's security controls, policies, and compliance with standards to ensure effectiveness and regulatory adherence.</p>
             </Link>
           </div>
           <div className='card'>
             <img src={img4} alt='img4' />
-            <Link to="/services/cyber-forensic" target="_blank">
+            <Link to="/services/cyber-forensic">
               <h2>Cyber forensic</h2>
               <p>Investigates and analyzes cyber incidents to uncover evidence, understand attacks, and aid in legal proceedings.</p>
             </Link>

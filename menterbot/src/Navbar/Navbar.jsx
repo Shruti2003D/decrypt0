@@ -81,7 +81,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-container">
           <div className="navbar-links">
-            <Link to="/home" className="navbar-text hover-effect" target="_blank">Home</Link>
+            <Link to="/home" className="navbar-text hover-effect">Home</Link>
             <Link to="/blogs" className="navbar-text hover-effect">Blogs</Link>
             <Link to="/about" className="navbar-text hover-effect">About</Link>
             <Link to="/contact" className="navbar-text hover-effect">Contact</Link>
