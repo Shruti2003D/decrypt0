@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import '../css/blogs-main.css';
+import { Link} from 'react-router-dom';
 import Footer from "./Footer";
+
 const Blogsmain = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+
+    const hasReloaded = localStorage.getItem('hasReloaded');
+
+    if (!hasReloaded) {
+      localStorage.setItem('hasReloaded', 'true');
+      window.location.reload();
+    }
+
     const fetchBlogs = async () => {
       try {
         const response = await fetch('http://localhost:5001/blogs');
@@ -27,6 +37,10 @@ const Blogsmain = () => {
 
     fetchBlogs();
   }, []);
+
+  const urlEncodeTitle = (title) => {
+    return encodeURIComponent(title);
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -70,7 +84,9 @@ const Blogsmain = () => {
               </div>
             </div>
             <p className="post-excerpt">{blog.postExcerpt}</p>
-            <button className="read-more">READ MORE</button>
+             <Link to={`/blogs/${urlEncodeTitle(blog.postTitle)}`}>
+              <button className="read-more">READ MORE</button>
+            </Link>
           </div>
         ))}
       </div>
