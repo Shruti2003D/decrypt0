@@ -24,9 +24,13 @@ import ServicesOffensive from './Components/servicesoffensive';
 import ServicesDefensive from './Components/servicesdefensive';
 import ServicesAuditing from './Components/servicesauditing';
 import ServicesCyber from './Components/servicescyber'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
 
   return (
+    <>
+    <ToastContainer />
     <Router>
       <Navbar />
       <Routes>
@@ -56,6 +60,7 @@ function App() {
         <Route path="/services/cyber-forensic" element={<ServicesCyber />} />
       </Routes>
     </Router>
+  </>
   );
 }
 

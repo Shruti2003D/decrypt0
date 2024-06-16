@@ -1,21 +1,60 @@
 import React, { useState } from 'react';
 import { CgClose } from "react-icons/cg";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import '../css/login.css';
 import Home from './Home';
 import Signup from './signup';
+import SummaryApi from '../common';
+import { toast } from 'react-toastify';
 
 const Login = ({ onClose }) => {
   const [openSignUpPage, setOpenSignUpPage] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
+  const [data, setData] = useState({
+    email: "",
+    password: ""
+  });
+  const navigate = useNavigate()
+
+  const handleOnChange = (e) => {
+    const { name, value } = e.target
+    setData((prev) => {
+      return {
+        ...prev,
+        [name]: value
+      }
+    })
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
+
+    const dataResponse = await fetch(SummaryApi.SignIn.url,{
+      method: SummaryApi.SignIn.method,
+      credentials: "include",
+      headers: {
+        "content-type" : "application/json"
+      },
+      body : JSON.stringify(data)
+    })
+
+    const dataApi = await dataResponse.json()
+
+    if(dataApi.success){
+      toast.success(dataApi.message)
+      navigate('/')
+    }
+
+    if(dataApi.error){
+      toast.error(dataApi.message)
+    }
   };
 
   return (
+    <>
+    <Home />
     <div className='overlay'>
       <div className='modal'>
         <div className='close-icon' onClick={onClose}>
@@ -32,7 +71,9 @@ const Login = ({ onClose }) => {
                       type='email'
                       placeholder='Username or email'
                       name='email'
-                      className='input-field' />
+                      className='input-field'
+                      value={data.email}
+                      onChange={handleOnChange} />
                   </div>
                 </div>
                 <div className='input-group'>
@@ -41,7 +82,10 @@ const Login = ({ onClose }) => {
                       type={showPassword ? "text" : "password"}
                       placeholder='Password'
                       name='password'
-                      className='input-field' />
+                      className='input-field' 
+                      value={data.password}
+                      onChange={handleOnChange}
+                      />
                     <div className='toggle-password' onClick={() => setShowPassword(prev => !prev)}>
                       {showPassword ? <FaEyeSlash /> : <FaEye />}
                     </div>
@@ -72,6 +116,7 @@ const Login = ({ onClose }) => {
         </section>
       </div>
     </div>
+  </>
   );
 };
 
