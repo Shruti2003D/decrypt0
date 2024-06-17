@@ -3,8 +3,10 @@ const app = require('./app');
 
 const port = 5000;
 
-// MongoDB connection
-mongoose.connect('mongodb+srv://admin:admin1234@mentorbot.6ggoacm.mongodb.net/blog', {
+// MongoDB connection MongoDB Atlas
+mongoose.connect('mongodb+srv://admin:admin1234@mentorbot.6ggoacm.mongodb.net/blog', 
+
+{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });

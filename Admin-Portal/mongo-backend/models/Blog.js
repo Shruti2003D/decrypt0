@@ -1,13 +1,16 @@
 const mongoose = require('mongoose');
 
 const blogSchema = new mongoose.Schema({
-    dateNumber: Number,
-    dateWord: String,
+    dateNumber: String,
     postTitle: String,
     author: String,
     category: String,
-    comments: String,
-    postExcerpt: String
+    blogadditional: String,
+    postExcerpt: String,
+    blogImage: {
+        data: Buffer,
+        contentType: String
+    }
 });
 
 const Blog = mongoose.model('Blog', blogSchema);

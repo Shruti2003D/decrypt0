@@ -1,30 +1,45 @@
+
+// module.exports = router;
 const express = require('express');
+const multer = require('multer');
 const Blog = require('../models/Blog');
 
 const router = express.Router();
 
-// Add a new blog
-router.post('/add-blog', async (req, res) => {
-    const blogData = req.body;
+// Configure Multer for file uploads
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
-    const newBlog = new Blog(blogData);
+// Route to add a new blog
+router.post('/add-blog', upload.single('blogImage'), async (req, res) => {
+    const { dateNumber, postTitle, author, category, blogadditional, postExcerpt } = req.body;
+    let blogImage = null;
+
+    if (req.file) {
+        blogImage = {
+            data: req.file.buffer,
+            contentType: req.file.mimetype
+        };
+    }
+
+    const newBlog = new Blog({
+        dateNumber,
+        postTitle,
+        author,
+        category,
+        blogadditional,
+        postExcerpt,
+        blogImage
+    });
 
     try {
         await newBlog.save();
         res.status(200).send('Blog saved successfully');
     } catch (err) {
+        console.error(err);
         res.status(500).send('Error saving blog');
     }
 });
 
-// Get all blogs
-router.get('/blogs', async (req, res) => {
-    try {
-        const blogs = await Blog.find();
-        res.status(200).json(blogs);
-    } catch (err) {
-        res.status(500).send('Error fetching blogs');
-    }
-});
 
 module.exports = router;

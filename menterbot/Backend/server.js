@@ -26,6 +26,7 @@ app.get('/blogs', async (req, res) => {
         const blogs = await Blog.find();
         res.status(200).json(blogs);
     } catch (err) {
+        console.error(err);
         res.status(500).send('Error fetching blogs');
     }
 });
