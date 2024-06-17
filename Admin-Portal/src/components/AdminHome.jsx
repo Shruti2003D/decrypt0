@@ -17,6 +17,15 @@ const AdminHome = () => {
                     <Link to="/add-testimonial">
                         <button className="admin-button">Add Testimonials</button>
                     </Link>
+                    <Link to="/add-courses-beginner">
+                        <button className="admin-button">Add Beginner Courses</button>
+                    </Link>
+                    <Link to="/add-courses-intermediate">
+                        <button className="admin-button">Add Intermediate Courses</button>
+                    </Link>
+                    <Link to="/add-courses-expert">
+                        <button className="admin-button">Add Advance Courses</button>
+                    </Link>
                 </div>
             </div>
         </section>

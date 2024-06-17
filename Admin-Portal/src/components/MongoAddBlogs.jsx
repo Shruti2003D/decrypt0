@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 const IndividualBlog = () => {
     const [dateNumber, setDateNumber] = useState('');
-
     const [postTitle, setPostTitle] = useState('');
     const [author, setAuthor] = useState('');
     const [category, setCategory] = useState('');
