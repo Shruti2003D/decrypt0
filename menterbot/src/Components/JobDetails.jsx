@@ -1,74 +1,127 @@
-import React,{ useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import '../css/JobDetails.css';
+import ApplyAdt from './ApplyAdt';
 import Footer from './Footer';
-import ApplyAdt from '../Components/applyforAdt';
 
 const JobDetails = () => {
+  const { id } = useParams();
+  const [job, setJob] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [openAdtPage, setOpenADTPage] = useState(false);
+
+  useEffect(() => {
+    const fetchJob = async () => {
+      try {
+        const response = await fetch(`http://localhost:5001/careers`);
+        if (response.ok) {
+          const data = await response.json();
+          const foundJob = data.find((j) => j._id === id);
+          if (foundJob) {
+            setJob(foundJob);
+          } else {
+            setError('Job not found');
+          }
+        } else {
+          console.error('Failed to fetch careers');
+          setError('Failed to fetch jobs');
+        }
+      } catch (error) {
+        console.error('Error fetching jobs:', error);
+        setError('Error fetching jobs');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchJob();
+  }, [id]);
+
+  const arrayBufferToBase64 = (buffer) => {
+    let binary = '';
+    const bytes = new Uint8Array(buffer);
+    const len = bytes.byteLength;
+    for (let i = 0; i < len; i++) {
+      binary += String.fromCharCode(bytes[i]);
+    }
+    return window.btoa(binary);
+  };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  if (!job) {
+    return <div>Job not found</div>;
+  }
+
   return (
     <>
-      <section>
-        <div className="center">
-          <div className="box-shade margin-1rem">
-            <img
-              className="out-course-img"
-              width="100%"
-              src="https://mentorbot.in/storage/images/application-development-trainer_20240130210219_w800_q80.jpg"
-              alt="Application Development Trainer"
-            />
+    <section className="center">
+      <div className="box-shade">
+        {job.jobImage && job.jobImage.data && (
+          <img
+            className='out-course-img'
+            src={`data:${job.jobImage.contentType};base64,${arrayBufferToBase64(job.jobImage.data.data)}`}
+            alt={job.jobTitle}
+          />
+        )}
+        <div className="job-details-content">
+          <div className="location">
+            <strong>Location:</strong> {job.location || 'Not specified'}
+          </div>
+          <div className="experience-level">
+            <strong>Experience Level:</strong> {job.experienceLevel || 'Not specified'}
+          </div>
+          <div className="type">
+            <strong>Type:</strong> {job.employmentType || 'Not specified'}
           </div>
           <div className="blog-article-description">
-            We are currently seeking an experienced Application Development Trainer to join our team. This role involves designing and delivering high-quality training modules in application development. The ideal candidate will have a strong background in app development, excellent module design skills, and a passion for teaching.
-          </div>
-          <div className="job-details-content">
-            <p><strong>Location:</strong> Various (Travel Required) 🌍</p>
-            <p><strong>Experience Level:</strong> 3+ Years 🚀</p>
-            <p><strong>Type:</strong> Full-Time ⏰</p>
-            <p><strong>About Our Company:</strong> As a premier IT consulting firm, we specialize in providing comprehensive technology solutions and training programs to a diverse range of clients. Our commitment to innovation and excellence sets us apart in the dynamic world of information technology.</p>
-            <p><strong>Key Responsibilities:</strong></p>
-            <ul>
-              <li>Design and develop engaging and effective training modules in application development.</li>
-              <li>Deliver training sessions to a variety of audiences, adapting to different learning styles and skill levels.</li>
-              <li>Stay abreast of the latest trends and advancements in app development to ensure the training material is current and relevant.</li>
-              <li>Provide hands-on guidance and support to trainees during the learning process.</li>
-              <li>Work collaboratively with the IT consulting team to assess training needs and customize modules accordingly.</li>
-              <li>Travel to various training locations as required by the company (all travel and accommodation expenses will be covered by the company).</li>
-            </ul>
-            <p><strong>Qualifications:</strong></p>
-            <ul>
-              <li>Minimum of 3 years of experience in application development.</li>
-              <li>Proven experience in designing and delivering training modules.</li>
-              <li>Strong knowledge of multiple programming languages and app development frameworks.</li>
-              <li>Excellent communication and presentation skills.</li>
-              <li>Ability to engage and inspire trainees.</li>
-              <li>Willingness to travel frequently for training delivery.</li>
-              <li>A bachelor's degree in Computer Science, IT, or a related field. Relevant certifications in app development will be an added advantage.</li>
-            </ul>
-            <p><strong>What We Offer:</strong></p>
-            <ul>
-              <li>A dynamic and supportive work environment.</li>
-              <li>Opportunities to work with diverse technologies and clients.</li>
-              <li>Competitive salary package.</li>
-              <li>Comprehensive coverage of all travel and accommodation expenses.</li>
-              <li>Opportunities for professional growth and development.</li>
-            </ul>
-            <p><strong>How to Apply:</strong> Send your updated resume to <a href="mailto:hiring@mentorbot.in">hiring@mentorbot.in</a>.</p>
-            <p>Please mention "Application Development Trainer - [Your Name]" in the subject line. (Pdf only). Highlight your experience in app development and previous training engagements, if any.</p>
-            <p>We are an equal-opportunity employer and value diversity at our company. We do not discriminate based on race, religion, colour, national origin, gender, sexual orientation, age, marital status, or disability status. Join us in shaping the future of application development training! 🚀</p>
-            <button className='button orange-btn' onClick={() => setOpenADTPage(true)}>Apply for Above Role</button>
-            {openAdtPage && (
-              <ApplyAdt onClose={() => setOpenADTPage(false)} />
-            )}
-          </div>
-          <div className="margin-1rem">
-            <div className="font-size09">
-              <div>Team Mentorbot</div>
-              <div>30 January 2024</div>
+            <p><strong>About us:</strong> {job.jobDescription || 'No description available'}</p>
+          </div>  
+          {job.responsibilities && (
+            <div className="blog-article-description">
+              <p><strong>Key Responsibilities:</strong></p>
+              <ul>
+                {job.responsibilities.split('\n').map((responsibility, index) => (
+                  <li key={index}>{responsibility}</li>
+                ))}
+              </ul>
             </div>
+          )}
+          {job.qualifications && (
+            <div className="blog-article-description">
+              <p><strong>Qualifications:</strong></p>
+              <ul>
+                {job.qualifications.split('\n').map((qualification, index) => (
+                  <li key={index}>{qualification}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {job.howToApply && (
+            <div className="blog-article-description">
+              <p><strong>How to Apply:</strong> {job.howToApply}</p>
+              <button className='button orange-btn' onClick={() => setOpenADTPage(true)}>Apply for Above Role</button>
+              {openAdtPage && (
+                <ApplyAdt onClose={() => setOpenADTPage(false)} jobTitle={job.jobTitle} />
+              )}
+            </div>
+          )}
+          <div className="font-size09">
+            <div>🚀 MentorBot: Educating Today, Empowering Tomorrow. 🚀</div>
+            <div>Team {job.company}</div>
+            <div>{new Date(job.applicationDeadline).toLocaleDateString()}</div>
           </div>
         </div>
-      </section>
-      <Footer />
+      </div>
+    </section>
+    <Footer/>
     </>
   );
 };

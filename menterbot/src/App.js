@@ -6,7 +6,7 @@ import Home from './Components/Home';
 import Navbar from './Navbar/Navbar';
 import About from './Components/About';
 import Contact from './Components/ContactUs';
-import Careers from './Components/Career';
+import Careersmain from "./Components/Careersmain";
 import Services from './Components/services';
 import Courses from './Components/Courses';
 import Login from './Components/login';
@@ -41,7 +41,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogsmain/>}/> 
         <Route path="/contact" element={<Contact />} />
-        <Route path="/careers" element={<Careers />} />
+        <Route path="/careers" element={<Careersmain />} />
         <Route path="/services" element={<Services />} />
         <Route path="/courses" element={<Courses />} />
 
@@ -55,7 +55,7 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/job-details" element={<JobDetails />} />
+        <Route path="/job-details/:id" element={<JobDetails />} />
 
         <Route path="/services/offensive-penetration-testing" element={<ServicesOffensive />} />
         <Route path="/services/defensive-penetration-testing" element={<ServicesDefensive />} />

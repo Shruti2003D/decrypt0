@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const Blog = require('./models/Blog'); // Import Blog model
-
+const Career = require('./models/Career');
+const jobappicationRoute = require('./routes/jobApplication')
 const app = express();
 const port = 5001;
 
@@ -30,6 +31,17 @@ app.get('/blogs', async (req, res) => {
         res.status(500).send('Error fetching blogs');
     }
 });
+app.get('/careers', async (req, res) => {
+    try {
+        const careers = await Career.find();
+        res.status(200).json(careers);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Error fetching careers');
+    }
+});
+
+app.use('/api', jobappicationRoute);
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
