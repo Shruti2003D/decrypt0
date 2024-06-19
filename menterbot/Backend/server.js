@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const Blog = require('./models/Blog'); // Import Blog model
 const Career = require('./models/Career');
+const CourseInt = require('./models/CourseInt');
+const CourseBeg = require('./models/CourseBeg');
+const CourseExp = require('./models/CourseExp');
 const jobappicationRoute = require('./routes/jobApplication')
 const app = express();
 const port = 5001;
@@ -38,6 +41,39 @@ app.get('/careers', async (req, res) => {
     } catch (err) {
         console.error(err);
         res.status(500).send('Error fetching careers');
+    }
+});
+
+// Add GET request for CourseInt
+app.get('/courses/int', async (req, res) => {
+    try {
+        const coursesInt = await CourseInt.find();
+        res.status(200).json(coursesInt);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Error fetching intermediate courses');
+    }
+});
+
+// Add GET request for CourseBeg
+app.get('/courses/beg', async (req, res) => {
+    try {
+        const coursesBeg = await CourseBeg.find();
+        res.status(200).json(coursesBeg);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Error fetching beginner courses');
+    }
+});
+
+// Add GET request for CourseExp
+app.get('/courses/exp', async (req, res) => {
+    try {
+        const coursesExp = await CourseExp.find();
+        res.status(200).json(coursesExp);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Error fetching expert courses');
     }
 });
 
