@@ -1,121 +1,79 @@
-.contact-section {
-  /* margin-top: 6%; */
-  padding-top: 6%;
-  font-family: 'Helvetica', 'Proxima Nova', 'Futura', sans-serif;
-  background-color: #ffffff;
-}
+/* ContactUs.css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 
-.contact-section-padding {
-  margin-top: 1%;
-  margin-bottom: 1%;
-  margin-left: 14%;
-  margin-right: 14%;
+.contact-section {
+  margin-top: 5px;
 }
 
 .contact-header {
-  padding: 50px 0;
+  background-image: url('https://example.com/path-to-image.jpg'); /* Add your image URL */
+  background-size: cover;
+  background-position: center;
   position: relative;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .background-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('https://eduma.thimpress.com/demo-main/wp-content/uploads/sites/95/2022/11/Eduma-cover-banner-17.jpg');
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-}
-
-.background-overlay::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Adjust the alpha value for the desired darkness */
-  z-index: 1;
+  z-index: 1; /* Ensure overlay is below the text */
 }
 
 .contact-title-container {
-  position: relative;
-  z-index: 3;
   display: flex;
-  justify-content: left;
-  padding-left: 14%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  z-index: 2; /* Ensure text is above the overlay */
 }
 
 .vertical-line {
-  margin-top: 0.5rem;
-  width: 5px;
-  height: 3rem;
-  background-color: #FF751A;
-  margin-right: 10px;
+  display: none;
+  width: 4px;
+  height: 100px;
+  background-color: #fff;
+  margin-right: 20px;
+  margin-top: 37px;
 }
 
 .contact-title {
-  color: white;
-  font-size: 3rem;
-}
-
-.container {
-  width: 900px;
-  max-width: 100%;
-}
-
-.breadcrumbs-wrapper #breadcrumbs {
-  padding: 13px 0;
-  margin: 0;
-  font-size: 25px;
-  border-bottom: 1px solid var(--thim-breacrumb-border-color, #eee);
-}
-
-h1, h2, h3, h4, h5, h6, .thim-font-heading {
-  font-family: var(--thim-font-title-font-family);
-}
-
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 100%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 37px;
+  color: #FF751A;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
 }
 
 .breadcrumbs-wrapper {
-  font-size: var(--thim-breacrumb-font-size, 1em);
-  color: var(--thim-breacrumb-color, #666);
-  background-color: var(--thim-breacrumb-bg-color, transparent);
+  margin: 20px 0;
+  background-color: #f8f8f8;
+  padding: 10px 0;
 }
 
-.breadcrumbs-wrapper #breadcrumbs a {
-  line-height: 25px;
-  display: inline-block;
-  color: inherit;
-  margin-right: 12px;
-}
-
-a {
-  color: #337ab7;
-  text-decoration: none;
-}
-a:-webkit-any-link {
-  color: -webkit-link;
-  cursor: pointer;
-}
-.breadcrumbs-wrapper #breadcrumbs li {
-  line-height: 25px;
-  display: inline-block;
-  color: inherit;
+.breadcrumbs {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 5px;
 }
 
-li {
-  text-align: -webkit-match-parent;
+.breadcrumbs a {
+  text-decoration: none;
+  color: #FF751A;
+}
+
+.breadcrumbs li {
+  display: inline;
 }
 
 .address-section {
@@ -123,185 +81,117 @@ li {
   background-color: #f9f9f9;
 }
 
-.address-section .container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
 .address-cards {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .address-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 50px;
-  flex: 1 1 calc(33.333% - 40px);
-  margin: 10px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  min-width: 400px; /* Ensures cards don't get too small on narrow screens */
-  height: 300px;
-  width: 300px;
+  width: 30%;
 }
 
 .address-card .icon {
-  margin-bottom: 10px;
-}
-
-.address-card .icon svg {
-  color: #ff751a; /* Change the color of the icon */
+  margin-bottom: 15px;
+  color: #FF751A;
 }
 
 .address-card h3 {
-  font-family: 'Proxima Nova', sans-serif;
   margin-bottom: 10px;
-  font-size: 1.6rem; /* Adjust the font size as needed */
-  font-weight: bold; /* Make the font bold */
+  font-size: 1.25rem;
 }
 
 .address-card p {
-  font-family: 'Futura', sans-serif; /* Use Futura for paragraph */
-  font-size: 1.2rem; /* Adjust the font size of the paragraph */
-  line-height: 1.6; /* Adjust line height as needed */
+  margin: 0;
 }
 
-.address-card .social-links {
+.social-links {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-  margin-left: 40px;
-  margin-right: 40px;
+  gap: 20px;
 }
 
-.address-card .social-links a {
-  margin: 0 10px;
-  color: #ff751a; /* Change the color of the social icons */
-  font-size: 1rem; /* Adjust the font size of the social icons */
+.social-links a {
+  color: #FF751A;
+  transition: transform 0.2s ease;
 }
 
-.address-card .social-links a svg {
-  border: 1px solid #ff751a; /* Add border to make icons outlined */
-  border-radius: 50%; /* Make border circular */
-  padding: 8px; /* Adjust padding as needed */
+.social-links a:hover {
+  transform: scale(1.1);
 }
 
-.address-card .social-links a:hover {
-  background-color: #007bff;
-  color: white; /* Change color on hover */
-}
-
-.address-card .social-links a:hover svg {
-  color: white; /* Change color on hover */
-}
-
-
-/* Contact Form Styling */
 .contact-form-section {
   padding: 50px 0;
-  background-color: #fff;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-form-section .container {
-  display: flex;
-  justify-content: center;
+  max-width: 800px;
+  width: 100%;
 }
 
-.thim-ekits-heading-text-center {
-  margin-bottom: 40px;
-
+.contact-form-section .title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-.thim-ekits-heading-text-center .title {
-  font-family: 'Proxima Nova', sans-serif;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: black;
-}
-
-.wpcf7-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.wpcf7-form p {
-  margin-bottom: 20px;
-}
-
-.wpcf7-form input[type="text"],
-.wpcf7-form input[type="email"],
-.wpcf7-form textarea {
+.wpcf7-form-control {
   width: 100%;
   padding: 10px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 2px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: black;
+  border-radius: 5px;
 }
 
-.wpcf7-form input[type="submit"] {
-  background-color: #ff751a;
+.wpcf7-submit {
+  background-color: #FF751A;
   color: #fff;
+  padding: 10px 20px;
   border: none;
-  padding: 12px 20px;
-  position: center;
-  margin-left: 230px;
+  border-radius: 5px;
   cursor: pointer;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  transition: background-color 0.3s ease;
-  
 }
 
-.wpcf7-form input[type="submit"]:hover {
-  background-color: #ff751a;
-
+.wpcf7-submit:hover {
+  background-color: #FF751A;
 }
 
-.wpcf7-response-output {
-  margin-top: 20px;
-  font-size: 1rem;
-  
+.map-section {
+  margin-bottom: 200px; /* Adjust margin as needed */
 }
 
-/* Spinner */
-.has-spinner {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.has-spinner .spinner {
-  border: 2px solid #fff;
-  border-top: 2px solid #007bff;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  animation: spin 0.8s linear infinite;
-  margin-left: 10px;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-  .wpcf7-form input[type="text"],
-  .wpcf7-form input[type="email"],
-  .wpcf7-form textarea {
-    font-size: 0.9rem;
+  .address-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .address-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .contact-title {
+    font-size: 1.75rem;
+  }
+
+  .contact-form-section .container {
+    padding: 0 20px;
   }
 }
 
+@media (max-width: 480px) {
+  .address-card {
+    width: 90%;
+  }
 
-
+  .contact-title {
+    font-size: 1.5rem;
+  }
+}

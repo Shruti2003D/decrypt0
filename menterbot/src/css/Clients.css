@@ -14,12 +14,14 @@
     }
 }
 
-.tcontainer span {
+.tcontainer .orange {
     text-align: center;
     padding-top: 1rem;
     font-size: 2.25rem;
     font-family: Helvetica;
-    color: #FF751A; /* Adjusted color */
+    color: #ff751a; /* Adjusted color */
+    opacity: 0; /* Hide initially for animation */
+    animation: fadeIn 1.7s forwards; /* Entrance animation */
 }
 
 .tcontainer h1 {
@@ -29,7 +31,9 @@
     font-size: 20px;
 }
 
-.slick-list, .slick-slider, .slick-track {
+.slick-list,
+.slick-slider,
+.slick-track {
     padding: 0;
 }
 
@@ -45,7 +49,11 @@
 .slick-dots li button {
     width: 15px;
     height: 9px;
-    background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
+    background: linear-gradient(
+        159deg,
+        rgb(45, 45, 58) 0%,
+        rgb(43, 43, 53) 100%
+    );
     padding: 0.1rem;
     margin-top: 1rem;
     transition: all 400ms ease-in-out;
@@ -66,7 +74,23 @@
     position: relative;
     text-align: center;
     align-items: stretch;
-    justify-content: center; 
+    justify-content: center;
+}
+
+.testimonials:hover {
+    transform: scale(0.95); /* Hover zoom-out effect */
+    transition: transform 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .tbuttons {

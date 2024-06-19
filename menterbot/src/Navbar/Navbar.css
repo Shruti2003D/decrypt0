@@ -33,6 +33,11 @@
 .logo {
   display: flex;
   align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(3px);
 }
 
 .logo img {
@@ -48,6 +53,11 @@
 
 .navbar-links > * {
   margin-right: 30px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-links > *:hover {
+  transform: translateY(6px);
 }
 
 .navbar-links .dropdown {
@@ -83,7 +93,7 @@
   border-radius: 5px;
   text-decoration: none;
   color: black;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-links .navbar-text:hover,
@@ -92,6 +102,7 @@
   background-color: #ff751a;
   color: white;
   border-color: #ff751a;
+  transform: translateY(3px);
 }
 
 .navbar-links .dropdown-content:hover::after {
@@ -115,7 +126,12 @@
   text-decoration: none;
   padding: 5px 10px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-button:hover,
+.signup-button:hover {
+  transform: translateY(3px);
 }
 
 .selected {

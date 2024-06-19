@@ -3,130 +3,160 @@
   flex-direction: column;
   align-items: center;
   padding: 50px 20px;
-  background-color: #f0f0f0; /* Light grey background for the whole section */
+  background-color: #f0f0f0;
   font-family: 'Helvetica', 'Proxima Nova', 'Futura', sans-serif;
   margin-top: 50px;
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  transition: background-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.about-us-section.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about-us-title {
   font-size: 50px;
-  color: #ff751a; /* Theme color for the title */
+  color: #ff751a;
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
-  transition: color 0.3s ease; /* Smooth color transition */
+  transition: color 0.3s ease;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.about-us-title.animate {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .about-us-subtitle {
   font-size: 30px;
-  color: #333; /* Dark color for the subtitle */
+  color: #333;
   margin-bottom: 40px;
   text-align: center;
-  transition: color 0.3s ease; /* Smooth color transition */
+  transition: color 0.3s ease;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.about-us-subtitle.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.motivation-inner-box h2 {
+  font-size: 24px;
   font-weight: bold;
 }
 
 .motivation-inner-box h2 {
-  font-size: 24px; /* Increased font size */
-  font-weight: bold; /* Bold text */
-}
-
-.motivation-inner-box h2 {
-  font-size: 19px; /* Increased font size */
+  font-size: 19px;
 }
 
 .motivation-box {
-  background-color: #ff751a; /* Orange background for the outer box */
+  background-color: #ff751a;
   padding: 20px;
-  border-radius: 10px; /* Rounded corners */
-  margin-bottom: 40px; /* Space below the motivation box */
-  width: 100%; /* Full width */
-  max-width: 800px; /* Limit the maximum width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better look */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  border-radius: 10px;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .motivation-box:hover {
-  transform: translateY(-5px); /* Lift the box slightly on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .motivation-inner-box {
-  background-color: #ffffff; /* White background for the inner box */
+  background-color: #ffffff;
   padding: 20px;
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 10px;
   text-align: center;
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  transition: background-color 0.3s ease;
 }
 
 .team-container {
   display: flex;
-  flex-wrap: wrap; /* Wrap layout for team members */
-  justify-content: center; /* Center align the team members */
-  gap: 20px; /* Space between team member boxes */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .team-member {
   display: flex;
-  flex-direction: column; /* Make it a flex container */
-  background-color: #ff751a; /* Orange background for the outer box */
+  flex-direction: column;
+  background-color: #ff751a;
   padding: 20px;
-  border-radius: 10px; /* Rounded corners */
-  width: 100%; /* Full width */
-  max-width: 400px; /* Increased maximum width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better look */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 1.2s ease, box-shadow 1.2s ease, opacity 1.2s ease, transform 1.2s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.team-member.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .team-member:hover {
-  transform: translateY(-5px); /* Lift the box slightly on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .member-inner-box {
-  flex: 1; /* Make the inner box grow to fill the available space */
-  background-color: #ffffff; /* White background for the inner box */
+  flex: 1;
+  background-color: #ffffff;
   padding: 20px;
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 10px;
   text-align: center;
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  transition: background-color 0.3s ease;
 }
 
 .member-photo {
-  width: 100px; /* Adjust the size as necessary */
-  height: 100px; /* Adjust the size as necessary */
-  border-radius: 50%; /* Circular photo */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   margin-bottom: 20px;
-  transition: transform 0.3s ease; /* Smooth transform transition */
+  transition: transform 0.3s ease;
 }
 
 .team-member:hover .member-photo {
-  transform: scale(1.1); /* Scale up the photo on hover */
+  transform: scale(1.1);
 }
 
 .member-name {
   font-size: 23px;
-  color: #333; /* Dark color for the name */
+  color: #333;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 .member-role {
   font-size: 20px;
-  color: #ff751a; /* Theme color for the role */
+  color: #ff751a;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 .member-description {
   font-size: 16px;
-  color: #666; /* Grey color for the description */
+  color: #666;
 }
 
 /* Media Queries for Responsiveness */
 
-/* For devices with a max-width of 768px (tablets and small screens) */
 @media (max-width: 768px) {
   .about-us-title {
     font-size: 40px;
@@ -137,15 +167,14 @@
   }
 
   .motivation-box, .team-member {
-    max-width: 100%; /* Remove the max-width restriction */
+    max-width: 100%;
   }
 
   .team-member {
-    max-width: 100%; /* Full width for team members */
+    max-width: 100%;
   }
 }
 
-/* For devices with a max-width of 480px (mobile phones) */
 @media (max-width: 480px) {
   .about-us-title {
     font-size: 30px;

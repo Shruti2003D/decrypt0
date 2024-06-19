@@ -1,10 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Slider from 'react-slick';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import ClientSlider from './ClientSlider';
 import '../css/Clients.css';
-
-
 
 let clients = [
     {
@@ -80,6 +78,11 @@ const Clients = () => {
     let clientDisc = clients.map((item, i) => (
         <ClientSlider item={item} key={i} />
     ));
+
+    useEffect(() => {
+        const testimonials = document.querySelector('.tcontainer .orange');
+        testimonials.style.opacity = 1; // Ensure opacity is set to 1
+    }, []);
 
     return (
         <div className="tcontainer" id="client">

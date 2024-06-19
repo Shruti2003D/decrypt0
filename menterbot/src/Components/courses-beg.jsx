@@ -7,17 +7,15 @@ import course2Image from '../assets/cyberforsenic.png';
 
 const CoursesBeg = () => {
   return (
-    <div className="courses-beg-page">
+    <div className="courses-beg-page animate__animated animate__fadeIn">
       <div className="dummyspace"></div>
       <div className="max-w-screen-xl mx-auto px-4">
-        <div className="text-center my-8">
+        <div className="text-center my-8 animate__animated animate__fadeInLeft">
           <h2 className="track-page-sub-heading">Category</h2>
-          <h1 className="teams-page-heading-one margin-top-2rem margin-2rem">
-            Beginner-level
-          </h1>
+          <h1 className="teams-page-heading-one margin-top-2rem margin-2rem">Beginner-level</h1>
         </div>
-        <div className="course-card-container grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4">
-          <div className="course_card bg-orange-500 text-white p-4 rounded-lg shadow-lg">
+        <div className="course-card-container grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4 animate__animated animate__fadeIn">
+          <div className="course_card bg-orange-500 text-white p-4 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
             <div className="course_img1 h-60 bg-cover bg-center rounded-t-lg" style={{ backgroundImage: `url(${course2Image})` }}></div>
             <div className="course_details_in p-4 flex flex-col justify-between">
               <div>
@@ -44,7 +42,7 @@ const CoursesBeg = () => {
               </div>
             </div>
           </div>
-          <div className="course_card bg-orange-500 text-white p-4 rounded-lg shadow-lg">
+          <div className="course_card bg-orange-500 text-white p-4 rounded-lg shadow-lg animate__animated animate__fadeInRight">
             <div className="course_img h-60 bg-cover bg-center rounded-t-lg" style={{ backgroundImage: `url(${courseImage})` }}></div>
             <div className="course_details_in p-4 flex flex-col justify-between">
               <div>

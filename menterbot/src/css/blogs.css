@@ -10,7 +10,20 @@
   display: block;
   margin: 2rem 0px 2rem;
   text-align: center;
-  color: #FF751A;
+  color: #ff751a;
+  opacity: 0; /* Hide initially for animation */
+  animation: fadeIn 1s forwards; /* Entrance animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .butt {
@@ -20,7 +33,7 @@
 }
 
 .butt button {
-  background-color: #FF751A;
+  background-color: #ff751a;
   font-family: "Roboto", sans-serif;
   border: none;
   cursor: pointer;
@@ -34,7 +47,7 @@
   background-color: #ec6a13;
 }
 
-/*Cards CSS*/
+/* Cards CSS */
 
 .cards-blogs {
   display: flex;
@@ -48,12 +61,17 @@
 
 .card-blog {
   position: relative;
-  background-color: #FD9066;
+  background-color: #fd9066;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 50px;
   width: calc(33.33% - 20px);
   /* Adjusted width calculation */
   margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card-blog:hover {
+  transform: scale(0.95); /* Hover zoom-out effect */
 }
 
 .card-blog a {
@@ -88,8 +106,8 @@
   color: #666;
 }
 
-
 /* Media Queries for responsiveness */
+
 @media (max-width: 1200px) {
   .cards-blogs {
     margin-left: 10%;

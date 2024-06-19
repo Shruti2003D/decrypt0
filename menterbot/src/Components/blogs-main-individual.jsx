@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { motion } from 'framer-motion'; // Import motion from framer-motion
 import '../css/blogs-main-individual.css';
 import Facebook from '../assets/white_icons8-facebook.svg';
 import Twitter from '../assets/white_icons8-twitter.svg';
@@ -8,6 +9,7 @@ import Gmail from '../assets/white_mail.svg';
 import WhatsApp from '../assets/wa (1).svg';
 import Footer from './Footer';
 import Blogs from './Blogs';
+
 const IndividualBlogInformation = () => {
     const [blog, setBlog] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -94,7 +96,12 @@ const IndividualBlogInformation = () => {
 
     return (
         <>
-            <section className="blog-main-individual-section">
+            <motion.section
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="blog-main-individual-section"
+            >
                 <div className="blog-header">
                     <div className="background-overlay"></div>
                     <div className="blog-title-container">
@@ -102,48 +109,146 @@ const IndividualBlogInformation = () => {
                         <h1 className="blog-title">Blogs</h1>
                     </div>
                 </div>
-                
-                        <div className='blogs-individual-title-background'>
-                            <h1 className='blogs-individual-title'>{blog.postTitle}</h1>
-                            <div className="blogs-individual-social-icons">
-                                <h3 className='blogs-individual-share-heading'>Share it on: </h3>
-                                <a href="https://www.facebook.com/people/Mentor-Bot/100072427163735/" target="_blank" rel="noopener noreferrer"><img src={Facebook} alt="Facebook" /></a>
-                                <a href="https://twitter.com/mentorb0t" target="_blank" rel="noopener noreferrer"><img src={Twitter} alt="Twitter" /></a>
-                                <a href="https://www.linkedin.com/in/mentor-bot-73274724b/" target="_blank" rel="noopener noreferrer"> <img src={LinkedIn} alt="LinkedIn" /></a>
-                                <a href="https://www.youtube.com/channel/UC_Pj72CWHP-ZPyUGtk4igHg" target="_blank" rel="noopener noreferrer"><img src={Gmail} alt="Gmail" /></a>
-                                <a href="https://wa.me/+917224032078" target="_blank" rel="noopener noreferrer"><img src={WhatsApp} alt="WhatsApp" /></a>
-                            </div>
+
+                <div className='blogs-individual-title-background'>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className='blogs-individual-title'
+                    >
+                        {blog.postTitle}
+                    </motion.h1>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        className="blogs-individual-social-icons"
+                    >
+                        <motion.h3
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                            className='blogs-individual-share-heading'
+                        >
+                            Share it on:
+                        </motion.h3>
+                        <motion.a
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.6, delay: 0.8 }}
+                            href="https://www.facebook.com/people/Mentor-Bot/100072427163735/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={Facebook} alt="Facebook" />
+                        </motion.a>
+                        <motion.a
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.6, delay: 1.0 }}
+                            href="https://twitter.com/mentorb0t"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={Twitter} alt="Twitter" />
+                        </motion.a>
+                        <motion.a
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.6, delay: 1.2 }}
+                            href="https://www.linkedin.com/in/mentor-bot-73274724b/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={LinkedIn} alt="LinkedIn" />
+                        </motion.a>
+                        <motion.a
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.6, delay: 1.4 }}
+                            href="https://www.youtube.com/channel/UC_Pj72CWHP-ZPyUGtk4igHg"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={Gmail} alt="Gmail" />
+                        </motion.a>
+                        <motion.a
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.6, delay: 1.6 }}
+                            href="https://wa.me/+917224032078"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={WhatsApp} alt="WhatsApp" />
+                        </motion.a>
+                    </motion.div>
+                </div>
+
+                <div className='blogs-individual-section-padding'>
+                    {blog.blogImage && blog.blogImage.data && (
+                        <motion.img
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                            className='blogs-individual-image'
+                            src={`data:${blog.blogImage.contentType};base64,${arrayBufferToBase64(blog.blogImage.data.data)}`}
+                            alt="Blog"
+                        />
+                    )}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.8 }}
+                        className="blogs-individual-post-meta"
+                    >
+                        <div className="blogs-individual-meta-item">
+                            <span>Posted by</span>
+                            <strong>{blog.author}</strong>
                         </div>
-                        <div className='blogs-individual-section-padding'>
-                            {blog.blogImage && blog.blogImage.data && (
-                                <img
-                                    className='blogs-individual-image'
-                                    src={`data:${blog.blogImage.contentType};base64,${arrayBufferToBase64(blog.blogImage.data.data)}`}
-                                    alt="Blog"
-                                />
-                            )}
-                            <div className="blogs-individual-post-meta">
-                                <div className="blogs-individual-meta-item">
-                                    <span>Posted by</span>
-                                    <strong>{blog.author}</strong>
-                                </div>
-                                <div className="blogs-individual-meta-item">
-                                    <span>Categories</span>
-                                    <strong>{blog.category}</strong>
-                                </div>
-                                <div className="blogs-individual-meta-item">
-                                    <span>Date</span>
-                                    <strong>{fullDate}</strong>
-                                </div>
-                            </div>
-                            <p className="post-excerpt">{blog.postExcerpt}</p>
-                            <span className='blogs-individual-subtitle'>Additional Information</span>
-                            <p className="post-excerpt">{blog.blogadditional}</p>
-                            <hr />
-                        </div>  
-                <Blogs/>                  
-                <Footer/>
-            </section>
+                        <div className="blogs-individual-meta-item">
+                            <span>Categories</span>
+                            <strong>{blog.category}</strong>
+                        </div>
+                        <div className="blogs-individual-meta-item">
+                            <span>Date</span>
+                            <strong>{fullDate}</strong>
+                        </div>
+                    </motion.div>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.0 }}
+                        className="post-excerpt"
+                    >
+                        {blog.postExcerpt}
+                    </motion.p>
+                    <motion.span
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.2 }}
+                        className='blogs-individual-subtitle'
+                    >
+                        Additional Information
+                    </motion.span>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.4 }}
+                        className="post-excerpt"
+                    >
+                        {blog.blogadditional}
+                    </motion.p>
+                    <motion.hr
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.6 }}
+                    />
+                </div>
+                <Blogs /> {/* Assuming this renders other blogs */}
+                <Footer />
+            </motion.section>
         </>
     );
 };

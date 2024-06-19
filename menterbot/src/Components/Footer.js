@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../css/footer.css'; // Import CSS file for styling
 import whatsapplogo from '../assets/whatsapp.svg';
 import Lifetime from '../assets/Lifetime.svg';
@@ -14,13 +14,35 @@ import logo from '../assets/logo.png'
 import { FaRegCopyright } from 'react-icons/fa';
 
 const Footer = () => {
+  const waContactRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = waContactRef.current;
+      if (!element) return;
+
+      const top = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (top < windowHeight) {
+        element.classList.add('animate');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="footer">
-      <div className='wa-contact'>
+      <div ref={waContactRef} className='wa-contact'>
         <img src={whatsapplogo} alt="WhatsApp Logo"></img>
-        <h2>To chat with us Contact Us At <span class="phone-number">+917224032078</span></h2>
+        <h2>To chat with us Contact Us At <span className="phone-number">+917224032078</span></h2>
         <h2>OR</h2>
-        <a href="https://wa.me/+917224032078" target="_blank" class="custom-button">JUST CLICK HERE !</a>
+        <a href="https://wa.me/+917224032078" target="_blank" className="custom-button">JUST CLICK HERE !</a>
       </div>
       <div className="quoteimage">
         <div className="image-container2">
@@ -67,12 +89,10 @@ const Footer = () => {
             <li><a href="#" target="_blank" >Terms and Conditions</a></li>
           </ul>
         </div>
-
       </div>
-      {/* <p>Copyright <FaRegCopyright /> 2024 mentorbot.in</p> */}
-      <p>Copyright © 2024 mentorbot.in</p>
+      <p className="footer-copyright">Copyright © 2024 mentorbot.in</p>
     </div>
   );
 };
 
-export default Footer;
+export default Footer;

@@ -8,28 +8,26 @@ import Footer from "./Footer";
 const ContactUs = ({ data, settings }) => {
   return (
     <section className="contact-section">
-
-    <div className="contact-header">
-      <div className="background-overlay"></div>
-      <div className="contact-title-container">
-        <div className="vertical-line"></div>
-        <h1 className="contact-title">Contact Us</h1>
-      </div>
-      </div>
-  
-        <div className="breadcrumbs-wrapper">
-          <div className="container">
-            <ul className="breadcrumbs" id="breadcrumbs">
-              <li><a href="/">Home |</a></li>
-              <li>Contact</li>
-            </ul>
-          </div>
+      <div className="contact-header animate__animated animate__fadeIn">
+        <div className="background-overlay"></div>
+        <div className="contact-title-container animate__animated animate__fadeInLeft">
+          <div className="vertical-line"></div>
+          <h1 className="contact-title">Contact Us</h1>
         </div>
-      
+      </div>
+
+      <div className="breadcrumbs-wrapper animate__animated animate__fadeInRight">
+        <div className="container">
+          <ul className="breadcrumbs" id="breadcrumbs">
+            <li><a href="/">Home |</a></li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
 
       <div className="address-section">
         <div className="container">
-          <div className="address-cards">
+          <div className="address-cards animate__animated animate__fadeInUp">
             <div className="address-card">
               <div className="icon">
                 <FontAwesomeIcon icon={faMapMarkerAlt} size="2x" />
@@ -57,7 +55,7 @@ const ContactUs = ({ data, settings }) => {
                 <FontAwesomeIcon icon={faEnvelope} size="2x" />
               </div>
               <h3>Join Us</h3>
-              <div className="social-links">
+              <div className="social-links animate__animated animate__pulse animate__infinite">
                 <a href="https://twitter.com/mentorb0t" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faTwitter} size="2x" />
                 </a>
@@ -86,12 +84,12 @@ const ContactUs = ({ data, settings }) => {
             <div className="elementor-element elementor-element-74968e3 thim-ekits-heading-text-center elementor-widget thim-ekits-heading elementor-widget-thim-heading" data-id="74968e3" data-element_type="widget" data-widget_type="thim-heading.default">
               <div className="elementor-widget-container">
                 <div className="sc_heading text-center">
-                  <h3 className="title">Fill the form below so we can get to know you and your needs better.</h3>
+                  <h3 className="title animate__animated animate__fadeInLeft">Fill the form below so we can get to know you and your needs better.</h3>
                 </div>
               </div>
             </div>
             <div className="elementor-element elementor-element-db9c2bc elementor-widget elementor-widget-thim-ekits-contact-form-7" data-id="db9c2bc" data-element_type="widget" data-widget_type="thim-ekits-contact-form-7.default">
-              <div className="elementor-widget-container">
+              <div className="elementor-widget-container animate__animated animate__zoomIn">
                 <div className="thim-ekit-wpcf7">
                   <div className="wpcf7 js" id="wpcf7-f13916-p87-o1" lang="en-US" dir="ltr">
                     <div className="screen-reader-response">
@@ -142,22 +140,23 @@ const ContactUs = ({ data, settings }) => {
       </div>
 
       {/* Map Section */}
-<div className="map-section" style={{ marginBottom: '200px' }}> {/* Adjust margin as needed */}
-  <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1833.1145922482285!2d77.43282243862926!3d23.234745744756385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c42664ad131e3%3A0x49fbb31da961dd9a!2sMP%20Nagar%20Zone-I%2C%20Zone-I%2C%20Maharana%20Pratap%20Nagar%2C%20Bhopal%2C%20Madhya%20Pradesh%20462023!5e0!3m2!1sen!2sin!4v1716988064987!5m2!1sen!2sin"
-      width="1500"  // Adjust width as needed
-      height="600"  // Adjust height as needed
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-</div>
+      <div className="map-section" style={{ marginBottom: '200px' }}> {/* Adjust margin as needed */}
+        <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1833.1145922482285!2d77.43282243862926!3d23.234745744756385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c42664ad131e3%3A0x49fbb31da961dd9a!2sMP%20Nagar%20Zone-I%2C%20Bhopal%2C%20Madhya%20Pradesh%20462011!5e0!3m2!1sen!2sin!4v1688011598960!5m2!1sen!2sin"
+            width="100%"
+            height="500"
+            frameBorder="0"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            aria-hidden="false"
+            tabIndex="0"
+          ></iframe>
+        </div>
+      </div>
 
-      
-      <Footer></Footer>
+      {/* Footer */}
+      <Footer />
     </section>
   );
 };

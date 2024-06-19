@@ -48,13 +48,6 @@ const jobListings = [
     description: "We're excited to have you on board as a Campus Ambassador. As a vital member of our team, your role is to bridge the gap between our organization and your campus community. Your enthusiasm and dedication will play a crucial role in representing our brand and building strong relationships on campus.",
     imageUrl: carrer3,
     route: "/job-details"
-  },
-  {
-    title: "Campus Ambassador",
-    date: "04 June 2024",
-    description: "We're excited to have you on board as a Campus Ambassador. As a vital member of our team, your role is to bridge the gap between our organization and your campus community. Your enthusiasm and dedication will play a crucial role in representing our brand and building strong relationships on campus.",
-    imageUrl: carrer3,
-    route: "/job-details"
   }
 ];
 
@@ -67,23 +60,23 @@ const Career = () => {
 
   return (
     <>
-    <div className="careers-section">
-      <div className="careers-title">Join Our Team</div>
-      <div className="careers-subtitle">Explore our current job openings</div>
-      <div className="flex-testi-card">
-        {jobListings.map((job, index) => (
-          <div className="job-box" key={index} onClick={() => handleCardClick(job.route)}>
-            <div className="job-inner-box">
-              <img className="out-course-img" width="100%" src={job.imageUrl} alt={job.title} />
-              <div className="job-date">{job.date}</div>
-              <div className="job-title">{job.title}</div>
-              <div className="job-description">{job.description}</div>
+      <div className="careers-section">
+        <div className="careers-title animate__animated animate__fadeInRight">Join Our Team</div>
+        <div className="careers-subtitle animate__animated animate__fadeInRight">Explore our current job openings</div>
+        <div className="flex-testi-card">
+          {jobListings.map((job, index) => (
+            <div className="job-box" key={index} onClick={() => handleCardClick(job.route)}>
+              <div className="job-inner-box">
+                <img className="out-course-img" width="100%" src={job.imageUrl} alt={job.title} />
+                <div className="job-date">{job.date}</div>
+                <div className="job-title">{job.title}</div>
+                <div className="job-description">{job.description}</div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-    <Footer></Footer>
+      <Footer></Footer>
     </>
   );
 };

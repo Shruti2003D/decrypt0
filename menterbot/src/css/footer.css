@@ -1,7 +1,6 @@
 .footer {
   margin-top: 2rem;
   align-content: center;
-  /* padding: 1rem; */
 }
 
 .footer p {
@@ -15,7 +14,7 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 5%;
-  background-color: #33BA47;
+  background-color: #33ba47;
   border-radius: 4px;
   padding: 2.5%;
   align-content: space-around;
@@ -23,6 +22,20 @@
   gap: 1rem;
   box-shadow: 0 0 10px rgb(38, 37, 41);
   text-align: center;
+  opacity: 0; /* Start with opacity 0 */
+  transform: translateY(20px); /* Start position off screen */
+  animation: fadeInUp 0.5s forwards ease-out; /* Animation settings */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End position */
+  }
 }
 
 .wa-contact h2 {
@@ -37,7 +50,7 @@
 }
 
 .custom-button {
-  color: #33BA47;
+  color: #33ba47;
   background: white;
   border: none;
   border-radius: 3px;
@@ -48,11 +61,17 @@
   font-family: Futura, sans-serif;
   font-weight: bold;
   box-shadow: 0 0 5px rgba(38, 37, 41, 0.5);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #d9d9d9; /* Darken background on hover */
+  color: #33ba47; /* Change text color on hover */
 }
 
 .quoteimage {
   margin-top: 2rem;
-  background-color: #FF751A;
+  background-color: #ff751a;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 5px;
@@ -135,11 +154,18 @@ ul {
   font-family: Futura, sans-serif;
   text-align: center;
   font-size: 15px;
-  color: #84878B;
+  color: #84878b;
 }
 
 ul li {
   margin-bottom: 20px;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: "Proxima Nova", sans-serif;
+  color: #84878b;
 }
 
 /* Media Queries */
