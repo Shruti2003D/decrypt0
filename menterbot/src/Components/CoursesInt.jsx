@@ -85,7 +85,7 @@ const CoursesInt = () => {
                   <span className="ml-2">5.0</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <span className="text-lg font-bold">₹ {course.intcfees.split('(')[0]}</span>
+                  <span className="text-lg font-bold"> {course.intcfees.split('(')[0]}</span>
                   <span className="line-through">{course.intcfees.match(/\( (.*) /)[1]}</span>
                   <span>{course.intcfees.match(/\( .* (\d+\.\d+% OFF)/)[1]}</span>
                 </div>

@@ -107,9 +107,9 @@ const CourseExpDetails = () => {
               <div className="course-details-box">
                 <div className="mb-subheading">Price</div>
                 <div className="price-details">
-                  <span className="current-price">₹ {course.expcfees}</span>
-                  <span className="original-price">₹ {course.expcoriginalprice}</span>
-                  <span className="discount">({course.expcdiscount} OFF)</span>
+                  <span className="current-price"> {course.expcfees}</span>
+                  <span className="original-price"> {course.expcoriginalprice}</span>
+                  {/* <span className="discount">({course.expcdiscount} OFF)</span> */}
                 </div>
                 <div className="buttons-container">
                   <button className="button orange-btn">Enroll now</button>

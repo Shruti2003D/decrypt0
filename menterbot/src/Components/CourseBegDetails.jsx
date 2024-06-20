@@ -107,9 +107,9 @@ const CourseBegDetails = () => {
               <div className="course-details-box">
                 <div className="mb-subheading">Price</div>
                 <div className="price-details">
-                  <span className="current-price">₹ {course.begcfees}</span>
-                  <span className="original-price">₹ {course.begcoriginalprice}</span>
-                  <span className="discount">({course.begcdiscount} OFF)</span>
+                  <span className="current-price"> {course.begcfees}</span>
+                  <span className="original-price"> {course.begcoriginalprice}</span>
+                  {/* <span className="discount">({course.begcdiscount} OFF)</span> */}
                 </div>
                 <div className="buttons-container">
                   <button className="button orange-btn">Enroll now</button>
