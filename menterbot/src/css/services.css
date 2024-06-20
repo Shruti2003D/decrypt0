@@ -11,7 +11,7 @@
 }
 
 .content {
-  color: black;
+  color: #ff751a;;
   text-align: left;
   margin-top: 110px;
   margin-bottom: 20px;
@@ -21,7 +21,7 @@
 }
 
 .content h1 {
-  color: black;
+  color: #ff751a;;
   font-size: 3.5em;
   letter-spacing: 0em;
   margin-bottom: 5px;
@@ -46,7 +46,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: rgb(168, 170, 173);
+  /* background-color: #ff751a; */
   padding: 15px;
   width: 100%;
   max-width: 1400px;

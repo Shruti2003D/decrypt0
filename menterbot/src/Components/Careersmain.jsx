@@ -77,36 +77,35 @@ const Careersmain = () => {
 
   return (
     <>
-    <section className="careers-section">
-      <div className="careers-title">Join Our Team</div>
-      <div className="careers-subtitle">Explore our current job openings</div>
-      <div className="flex-testi-card">
-        {careers.map((career) => {
-          const { day, month } = formatDate(career.applicationDeadline);
-          return (
-            <div className="job-box" key={career._id}>
-              <div className="job-inner-box">
-                {career.jobImage && career.jobImage.data && (
-                  <img
-                    className="out-course-img"
-                    width="100%"
-                    src={`data:${career.jobImage.contentType};base64,${arrayBufferToBase64(career.jobImage.data.data)}`}
-                    alt={career.jobTitle}
-                  />
-                )}
-                <div className="job-date">{`${day} ${month}`}</div>
-                <div className="job-title">{career.jobTitle}</div>
-                <div className="job-description">{career.jobDescription}</div>
-                <Link to={`/job-details/${career._id}`}>
-                  <button className="read-more-btn">Read More</button>
-                </Link>
+      <section className="careers-section">
+        <div className="careers-title">Join Our Team</div>
+        <div className="careers-subtitle">Explore our current job openings</div>
+        <div className="flex-testi-card">
+          {careers.map((career) => {
+            const { day, month } = formatDate(career.applicationDeadline);
+            return (
+              <div className="job-box" key={career._id}>
+                <div className="job-inner-box">
+                  {career.jobImage && career.jobImage.data && (
+                    <img
+                      className="out-course-img"
+                      src={`data:${career.jobImage.contentType};base64,${arrayBufferToBase64(career.jobImage.data.data)}`}
+                      alt={career.jobTitle}
+                    />
+                  )}
+                  <div className="job-date">{`${day} ${month}`}</div>
+                  <div className="job-title">{career.jobTitle}</div>
+                  <div className="job-description">{career.jobDescription}</div>
+                  <Link to={`/job-details/${career._id}`}>
+                    <button className="read-more-btn">Read More</button>
+                  </Link>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-    </section>
-    <Footer/>
+            );
+          })}
+        </div>
+      </section>
+      <Footer />
     </>
   );
 };

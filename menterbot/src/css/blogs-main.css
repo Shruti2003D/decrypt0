@@ -1,3 +1,13 @@
+/* New CSS for hover zoom-in effect */
+.blog-post-summary {
+    transition: transform 0.3s ease;
+}
+
+.blog-post-summary:hover {
+    transform: scale(1.05); /* Zoom-in effect */
+}
+
+/* Existing CSS */
 .blogs-section {
     padding-top: 6%;
     font-family: 'Helvetica', 'Proxima Nova', 'Futura', sans-serif;
@@ -99,7 +109,6 @@
 .blog-header {
     padding: 50px 0;
     position: relative;
-
 }
 
 .background-overlay {

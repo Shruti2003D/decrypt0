@@ -1,5 +1,5 @@
 .dummyspace {
-  height: 8rem;
+  height: 19rem;
 }
 
 .center {
@@ -13,7 +13,7 @@
   font-size: 1.5rem;
   color: #FF751A;
   font-weight: 758;
-  margin-top: 0.5rem;
+  margin-top: 1.6rem;
   margin-left: 25px;
   margin-bottom: 0;
 }
@@ -24,6 +24,7 @@
   color: #FF751A;
   font-weight: 700;
   text-align: center;
+  margin-top: 95px;
 }
 
 * {

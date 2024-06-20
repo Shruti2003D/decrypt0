@@ -1,3 +1,13 @@
+/* New CSS for hover zoom-in effect */
+.client-card {
+    transition: transform 0.3s ease;
+}
+
+.client-card:hover {
+    transform: scale(1.05); /* Zoom-in effect */
+}
+
+/* Existing CSS */
 .tcontainer {
     width: 80%;
     max-width: 1280px;

@@ -76,7 +76,9 @@ var settings = {
 const Clients = () => {
     const arrowRef = useRef(null);
     let clientDisc = clients.map((item, i) => (
-        <ClientSlider item={item} key={i} />
+        <div className="client-card" key={i}>
+            <ClientSlider item={item} />
+        </div>
     ));
 
     useEffect(() => {

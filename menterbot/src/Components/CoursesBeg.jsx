@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'animate.css/animate.min.css'; // Import animate.css for animations
+import Footer from './Footer';
 
 const CoursesBeg = () => {
   const [courses, setCourses] = useState([]);
@@ -56,50 +57,53 @@ const CoursesBeg = () => {
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
-      <div className="max-w-screen-xl mx-auto px-4">
-        <div className="text-center my-8">
-          <h2 className="text-xl font-semibold text-orange-600 animate__animated animate__fadeInLeft">Category</h2>
-          <h1 className="text-4xl font-semibold text-orange-600 mt-2 animate__animated animate__fadeInLeft animate__delay-1s">Beginner-level</h1>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 justify-center">
-          {courses.map((course) => (
-            <div key={course._id} className="bg-orange-600 text-white p-6 rounded-lg shadow-lg animate__animated animate__fadeIn">
-              {course.begcImage && course.begcImage.data && course.begcImage.contentType ? (
-                <div
-                  className="h-60 bg-cover bg-center rounded-t-lg"
-                  style={{ backgroundImage: `url(data:${course.begcImage.contentType};base64,${arrayBufferToBase64(course.begcImage.data.data)})` }}
-                ></div>
-              ) : (
-                <div
-                  className="h-60 bg-cover bg-center rounded-t-lg"
-                  style={{ backgroundImage: `url('/path/to/default/image.png')` }}
-                ></div>
-              )}
-              <div className="mt-4 space-y-2">
-                <h3 className="text-xl font-bold">{course.begcTitle}</h3>
-                <div className="flex items-center">
-                  <span className="text-lg">★★★★★</span>
-                  <span className="ml-2">5.0</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span className="text-lg font-bold">₹ {course.begcfees.split('(')[0]}</span>
-                  <span className="line-through">{course.begcfees.match(/\( (.*) /)[1]}</span>
-                  <span>{course.begcfees.match(/\( .* (\d+\.\d+% OFF)/)[1]}</span>
-                </div>
-                <p className="text-sm">
-                  Instructor: <span className="font-semibold">{course.begcinstructor}</span>
-                </p>
-                <div className="mt-4">
-                  <Link className="bg-white text-orange-600 px-4 py-2 rounded shadow" to={`/courses/${course._id}`}>
-                    Read more
-                  </Link>
+    <div className="main-container bg-gray-100 min-h-screen pt-12 pb-20">
+      <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+        <div className="max-w-screen-xl mx-auto px-4">
+          <div className="text-center my-8">
+            <h2 className="text-xl font-semibold text-orange-600 animate__animated animate__fadeInLeft mb-4">Category</h2>
+            <h1 className="text-4xl font-semibold text-orange-600 animate__animated animate__fadeInLeft animate__delay-1s mb-8">Beginner-level</h1>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 justify-center">
+            {courses.map((course) => (
+              <div key={course._id} className="bg-orange-600 text-white p-6 rounded-lg shadow-lg animate__animated animate__fadeIn">
+                {course.begcImage && course.begcImage.data && course.begcImage.contentType ? (
+                  <div
+                    className="h-60 bg-cover bg-center rounded-t-lg"
+                    style={{ backgroundImage: `url(data:${course.begcImage.contentType};base64,${arrayBufferToBase64(course.begcImage.data.data)})` }}
+                  ></div>
+                ) : (
+                  <div
+                    className="h-60 bg-cover bg-center rounded-t-lg"
+                    style={{ backgroundImage: `url('/path/to/default/image.png')` }}
+                  ></div>
+                )}
+                <div className="mt-4 space-y-2">
+                  <h3 className="text-xl font-bold">{course.begcTitle}</h3>
+                  <div className="flex items-center">
+                    <span className="text-lg">★★★★★</span>
+                    <span className="ml-2">5.0</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-lg font-bold">₹ {course.begcfees.split('(')[0]}</span>
+                    <span className="line-through">{course.begcfees.match(/\( (.*) /)[1]}</span>
+                    <span>{course.begcfees.match(/\( .* (\d+\.\d+% OFF)/)[1]}</span>
+                  </div>
+                  <p className="text-sm">
+                    Instructor: <span className="font-semibold">{course.begcinstructor}</span>
+                  </p>
+                  <div className="mt-4">
+                    <Link className="bg-white text-orange-600 px-4 py-2 rounded shadow" to={`/courses/${course._id}`}>
+                      Read more
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
