@@ -8,7 +8,7 @@ import About from './Components/About';
 import Contact from './Components/ContactUs';
 import Careersmain from "./Components/Careersmain";
 import Services from './Components/services';
-import Courses from './Components/Courses';
+// import Courses from './Components/Courses';
 import Login from './Components/login';
 import Signup from './Components/signup';
 
@@ -20,7 +20,6 @@ import ServicesAuditing from './Components/servicesauditing';
 import ServicesCyber from './Components/servicescyber'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import ServicesCyber from './Components/servicescyber';
 import IndividualBlogInformation from './Components/blogs-main-individual';
 import CoursesExp from './Components/CoursesExp';
 import CoursesIntDetails from "./Components/CoursesIntDetails";
@@ -44,7 +43,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<Careersmain />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/courses" element={<Courses />} />
+        {/* <Route path="/courses" element={<Courses />} /> */}
 
         <Route path="/courses/beginner" element={<CoursesBeg />} />
         <Route path="/courses/intermediate" element={<CoursesInt />} />
@@ -61,7 +60,6 @@ function App() {
         <Route path="/services/cyber-forensic" element={<ServicesCyber />} />
 
         <Route path="/blogs/:title" element={<IndividualBlogInformation />} />
-        {/* <Route path="/blogs/individual-blog-information" element={<IndividualBlogInformation />} /> */}
       </Routes>
     </Router>
   </>

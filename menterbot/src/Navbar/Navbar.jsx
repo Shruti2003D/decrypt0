@@ -90,9 +90,9 @@ const Navbar = () => {
             <div className="dropdown">
               <span className="navbar-text hover-effect">Courses</span>
               <div className="dropdown-content">
-                <Link to="/courses/beginner" className="navbar-text" target="_blank">Beginner Level</Link>
-                <Link to="/courses/intermediate" className="navbar-text" target="_blank">Intermediate Level</Link>
-                <Link to="/courses/advanced" className="navbar-text" target="_blank">Advanced Level</Link>
+                <Link to="/courses/beginner" className="navbar-text" >Beginner Level</Link>
+                <Link to="/courses/intermediate" className="navbar-text">Intermediate Level</Link>
+                <Link to="/courses/advanced" className="navbar-text">Advanced Level</Link>
               </div>
             </div>
           </div>
