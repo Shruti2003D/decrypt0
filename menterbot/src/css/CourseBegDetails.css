@@ -1,135 +1,183 @@
-.dummyspace {
-    height: 8rem;
+/* General styles */
+.center {
+  max-width: 984px;
+  padding: 0 1rem;
+  margin: auto;
+  font-family: "Futura", sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .course-band {
-    background: #FF751A;
-    color: #fff;
-    padding: 1rem 0;
-    margin: 1rem 0;
+  to {
+    opacity: 1;
   }
-  
-  .center {
-    max-width: 984px;
-    padding: 0 1rem;
-    margin: auto;
+}
+
+.box-shade {
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.image-container {
+  text-align: center;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
   }
-  
-  /* Media query for devices with a width between 768px and 1024px */
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .center {
-      max-width: 1024px;
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  .mb-subheading {
-    text-align: left;
-    font-size: 2.5rem;
-    color: var(--mbr);
-    font-weight: 750;
-    margin-bottom: 1rem;
+}
+
+.out-course-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.course-details-content {
+  padding: 1rem;
+  font-family: "Futura", sans-serif;
+}
+
+.course-band {
+  background: #FF751A;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  font-family: "Proxima Nova", sans-serif;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.course-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.course-details-left,
+.course-details-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.course-details-box {
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #f9f9f9;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.mb-subheading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FF751A;
+  font-family: "Proxima Nova", sans-serif;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.margin-1rem {
+  margin-bottom: 1rem;
+}
+
+.price-details {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FF751A;
+}
+
+.current-price {
+  margin-right: 0.5rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 0.5rem;
+}
+
+.discount {
+  color: #FF751A;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--mbr);
+  border-radius: 0.28571429rem;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: "Proxima Nova", sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.button:hover {
+  background-color: #FF751A;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.orange-btn {
+  background-color: #FF751A;
+  color: #fff;
+}
+
+.font-size09 {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: #888;
+}
+
+.text {
+  font-family: "Futura", sans-serif;
+}
+
+.black-text {
+  color: black;
+}
+
+ul {
+  color: black;
+  font-family: "Futura", sans-serif;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .course-details-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .blog-band-color {
-    color: #fff;
-    margin-top: 0;
-    text-align: left;
-    margin-bottom: 0.4rem;
-  }
-  
-  .out-course-img {
-    border-radius: 0.5rem;
-  }
-  
-  .course-right-left {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-  
-  .course-details-box {
-    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important;
-    padding: 1rem;
-    border-radius: 0.5rem;
-  }
-  
-  .margin-1rem {
-    margin-bottom: 1rem;
-  }
-  
-  .font-weigh {
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: #FF751A;
-    margin-bottom: 1rem;
-    font-family: "Proxima Nova", sans-serif;
-  }
-  
-  .course_rate {
-    padding: 0.5rem 0;
-  }
-  
-  .orange {
-    color: #FF751A !important;
-  }
-  
-  .discount_rate {
-    font-size: 1.1rem;
-    font-weight: 700;
-    padding-right: 1rem;
-  }
-  
-  .real_rate {
-    text-decoration: line-through;
-  }
-  
-  .discount_cent {
-    font-weight: 700;
-  }
-  
-  .button {
-    -webkit-text-size-adjust: 100%;
-    box-sizing: inherit;
-    cursor: pointer;
-    display: inline-block;
-    min-height: 1em;
-    outline: 0;
-    border: none;
-    vertical-align: baseline;
-    background: #ffffff none;
-    border: 1px solid var(--mbr);
-    color: rgba(0, 0, 0, 0.6);
-    font-family: "Google Sans Text", Roboto, Arial, sans-serif;
-    margin: 0 0.25em 0 0;
-    padding: 0.78571429em 1.5em 0.78571429em;
-    text-transform: none;
-    text-shadow: none;
-    font-weight: 700;
-    line-height: 1em;
-    font-style: normal;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 0.28571429rem;
-    box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
-    user-select: none;
-    transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
-    -webkit-tap-highlight-color: transparent;
-    font-size: 1rem;
-  }
-  
-  .orange-btn {
-    background: #FF751A !important;
-    color: #fff !important;
-  }
-  
-  .text {
-    font-family: Futura, sans-serif;
-  }
-  
-  /* Additional button styling */
+
   .buttons-container {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    margin-top: 20px;
   }
-  
+}

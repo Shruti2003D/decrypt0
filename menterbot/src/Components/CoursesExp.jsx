@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import 'animate.css/animate.min.css'; // Import animate.css for animations
 
 const CoursesExp = () => {
   const [courses, setCourses] = useState([]);
@@ -55,45 +56,44 @@ const CoursesExp = () => {
   }
 
   return (
-    <div className="courses-exp-page">
-      <div className="dummyspace"></div>
+    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="text-center my-8">
-          <h2 className="track-page-sub-heading">Category</h2>
-          <h1 className="teams-page-heading-one margin-2rem">Expert-level</h1>
+          <h2 className="text-xl font-semibold text-orange-600 animate__animated animate__fadeInLeft">Category</h2>
+          <h1 className="text-4xl font-semibold text-orange-600 mt-2 animate__animated animate__fadeInLeft animate__delay-1s">Expert-level</h1>
         </div>
-        <div className="course-card-container course_cards">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 justify-center">
           {courses.map((course) => (
-            <div className="course_card course_details" key={course._id}>
+            <div key={course._id} className="bg-orange-600 text-white p-6 rounded-lg shadow-lg animate__animated animate__fadeIn">
               {course.expcImage && course.expcImage.data && course.expcImage.contentType ? (
                 <div
-                  className="course_img"
+                  className="h-60 bg-cover bg-center rounded-t-lg"
                   style={{ backgroundImage: `url(data:${course.expcImage.contentType};base64,${arrayBufferToBase64(course.expcImage.data.data)})` }}
                 ></div>
               ) : (
                 <div
-                  className="course_img"
+                  className="h-60 bg-cover bg-center rounded-t-lg"
                   style={{ backgroundImage: `url('/path/to/default/image.png')` }}
                 ></div>
               )}
-              <div className="course_details_in">
-                <h3 className="course_title">{course.expcTitle}</h3>
-                <div className="course_card_flex">
-                  <div className="course-rating">
-                    <span className="rating-stars">★★★★★</span>
-                    <span className="rating-value">5.0</span>
-                  </div>
-                  <div className="course_rate">
-                    <span className="discount_rate">{course.expcfees.split('(')[0]}</span>
-                    <span className="real_rate">{course.expcfees.match(/\( (.*) /)[1]}</span>
-                    <span className="discount_cent">{course.expcfees.match(/\( .* (\d+\.\d+% OFF)/)[1]}</span>
-                  </div>
+              <div className="mt-4 space-y-2">
+                <h3 className="text-xl font-bold">{course.expcTitle}</h3>
+                <div className="flex items-center">
+                  <span className="text-lg">★★★★★</span>
+                  <span className="ml-2">5.0</span>
                 </div>
-                <p className="course-instructor">
-                  Instructor: <span className="font-weight">{course.expcinstructor}</span>
+                <div className="flex items-center space-x-2">
+                  <span className="text-lg font-bold">₹ {course.expcfees.split('(')[0]}</span>
+                  <span className="line-through">{course.expcfees.match(/\( (.*) /)[1]}</span>
+                  <span>{course.expcfees.match(/\( .* (\d+\.\d+% OFF)/)[1]}</span>
+                </div>
+                <p className="text-sm">
+                  Instructor: <span className="font-semibold">{course.expcinstructor}</span>
                 </p>
-                <div className="course-btn-flex">
-                  <Link className="button white-orange" to={`/courses/exp/${course._id}`}>Read more</Link>
+                <div className="mt-4">
+                  <Link className="bg-white text-orange-600 px-4 py-2 rounded shadow" to={`/courses/exp/${course._id}`}>
+                    Read more
+                  </Link>
                 </div>
               </div>
             </div>
