@@ -66,7 +66,7 @@ const CoursesBeg = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 justify-center">
             {courses.map((course) => (
-              <div key={course._id} className="bg-orange-600 text-white p-6 rounded-lg shadow-lg animate__animated animate__fadeIn">
+              <div key={course._id} className="text-white p-6 rounded-lg shadow-lg animate__animated animate__fadeIn" style={{ backgroundColor: '#FF751A' }}>
                 {course.begcImage && course.begcImage.data && course.begcImage.contentType ? (
                   <div
                     className="h-60 bg-cover bg-center rounded-t-lg"
@@ -103,7 +103,7 @@ const CoursesBeg = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
