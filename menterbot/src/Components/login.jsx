@@ -8,7 +8,7 @@ import Signup from './signup';
 import SummaryApi from '../common';
 import { toast } from 'react-toastify';
 
-const Login = ({ onClose }) => {
+const Login = () => {
   const [openSignUpPage, setOpenSignUpPage] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
@@ -44,7 +44,7 @@ const Login = ({ onClose }) => {
 
     if(dataApi.success){
       toast.success(dataApi.message)
-      navigate('/')
+      navigate('/dashboard')
     }
 
     if(dataApi.error){
@@ -52,12 +52,16 @@ const Login = ({ onClose }) => {
     }
   };
 
+  const handleClose = (navigate) => {
+    navigate('/');
+  };
+
   return (
     <>
     <Home />
     <div className='overlay'>
       <div className='modal'>
-        <div className='close-icon' onClick={onClose}>
+        <div className='close-icon' onClick={() => handleClose(navigate)}>
           <CgClose />
         </div>
         <section id='login'>
