@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/blogs-main.css';
 import Footer from './Footer';
+import Navbar from './Navbar';
 const Blogsmain = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -65,6 +66,8 @@ const Blogsmain = () => {
   }
 
   return (
+    <>
+    <Navbar/>
     <section className="blogs-section">
       <div className="blog-header">
         <div className="background-overlay"></div>
@@ -106,6 +109,7 @@ const Blogsmain = () => {
       </div>
       <Footer />
     </section>
+    </>
   );
 };
 

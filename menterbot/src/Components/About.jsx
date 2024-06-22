@@ -5,6 +5,7 @@ import hrishabhPhoto from '../assets/Hrishab.jpg';
 import khushiPhoto from '../assets/Khushi.jpeg';
 import '../css/About.css';
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 const About = () => {
   let { id } = useParams();
@@ -33,18 +34,31 @@ const About = () => {
 
       const observer = new IntersectionObserver(observerCallback, options);
 
-      if (aboutUsTitleRef.current) observer.observe(aboutUsTitleRef.current);
-      if (aboutUsSubtitleRef.current) observer.observe(aboutUsSubtitleRef.current);
-      if (aboutSectionRef.current) observer.observe(aboutSectionRef.current);
-      if (motivationBoxRef.current) observer.observe(motivationBoxRef.current);
-      teamMembersRef.current.forEach((member) => observer.observe(member));
+      // Create a list of elements to observe
+      const elementsToObserve = [
+        aboutUsTitleRef.current,
+        aboutUsSubtitleRef.current,
+        aboutSectionRef.current,
+        motivationBoxRef.current,
+        ...teamMembersRef.current,
+      ];
+
+      // Log elements that are being observed for debugging
+      elementsToObserve.forEach((el, index) => {
+        if (el) {
+          console.log(`Observing element at index ${index}`, el);
+          observer.observe(el);
+        } else {
+          console.log(`Element at index ${index} is null`);
+        }
+      });
 
       return () => {
-        if (aboutUsTitleRef.current) observer.unobserve(aboutUsTitleRef.current);
-        if (aboutUsSubtitleRef.current) observer.unobserve(aboutUsSubtitleRef.current);
-        if (aboutSectionRef.current) observer.unobserve(aboutSectionRef.current);
-        if (motivationBoxRef.current) observer.unobserve(motivationBoxRef.current);
-        teamMembersRef.current.forEach((member) => observer.unobserve(member));
+        elementsToObserve.forEach((el) => {
+          if (el) {
+            observer.unobserve(el);
+          }
+        });
       };
     };
 
@@ -53,6 +67,7 @@ const About = () => {
 
   return (
     <>
+      <Navbar />
       <section className="about-us-section" ref={aboutSectionRef}>
         <h1 className="about-us-title" ref={aboutUsTitleRef}>About Us</h1>
         <div className="motivation-box" ref={motivationBoxRef}>

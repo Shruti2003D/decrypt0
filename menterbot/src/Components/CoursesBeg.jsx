@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'animate.css/animate.min.css'; // Import animate.css for animations
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 const CoursesBeg = () => {
   const [courses, setCourses] = useState([]);
@@ -57,6 +58,8 @@ const CoursesBeg = () => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="main-container bg-gray-100 min-h-screen pt-12 pb-20">
       <div className="bg-gray-100 min-h-screen flex items-center justify-center">
         <div className="max-w-screen-xl mx-auto px-4">
@@ -105,6 +108,7 @@ const CoursesBeg = () => {
       </div>
       <Footer />
     </div>
+    </>
   );
 };
 

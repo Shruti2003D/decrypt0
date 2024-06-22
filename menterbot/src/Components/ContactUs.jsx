@@ -4,9 +4,12 @@ import { faMapMarkerAlt, faPhone, faEnvelope } from "@fortawesome/free-solid-svg
 import { faTwitter, faLinkedin, faYoutube, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import "../css/ContactUs.css"; // Make sure to import the CSS file
 import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 const ContactUs = ({ data, settings }) => {
   return (
+    <>
+    <Navbar/>
     <section className="contact-section">
       <div className="contact-header animate__animated animate__fadeIn">
         <div className="background-overlay"></div>
@@ -158,6 +161,7 @@ const ContactUs = ({ data, settings }) => {
       {/* Footer */}
       <Footer />
     </section>
+    </>
   );
 };
 

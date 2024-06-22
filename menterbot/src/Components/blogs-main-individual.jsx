@@ -9,6 +9,7 @@ import Gmail from '../assets/white_mail.svg';
 import WhatsApp from '../assets/wa (1).svg';
 import Footer from './Footer';
 import Blogs from './Blogs';
+import Navbar from './Navbar';
 
 const IndividualBlogInformation = () => {
     const [blog, setBlog] = useState(null);
@@ -96,6 +97,7 @@ const IndividualBlogInformation = () => {
 
     return (
         <>
+        <Navbar/>
             <motion.section
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
