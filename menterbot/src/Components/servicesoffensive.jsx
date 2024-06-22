@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom';
 import '../css/servicesdetails.css';
 import img1 from '../Components/Services/img1.webp';
 import IconComponent from './Icons';
+import Navbar from './Navbar';
 
 
 const ServicesOffensive = () => {
   return (
     <>
+    <Navbar/>
       <section className="services-section">
         <div className="job-details-content">
           <div className="services-header animate__animated animate__fadeInDown">
