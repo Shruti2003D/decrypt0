@@ -6,7 +6,7 @@ async function userSignInController(req,res){
     try{
         const { email, password } = req.body
 
-        if(!email){
+        if(!email){ 
             throw new Error("Please provide email")
         }
         if(!password){
