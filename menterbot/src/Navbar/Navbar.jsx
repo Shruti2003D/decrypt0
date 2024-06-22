@@ -97,8 +97,10 @@ const Navbar = () => {
             </div>
           </div>
           <div className="login-signup">
-            <button className='login-button hover-effect' onClick={() => setOpenLoginPage(true)}>Login</button>
-            <button className='signup-button hover-effect' onClick={() => setOpenSignUpPage(true)}>Sign Up</button>
+            <Link to="/login" className="login-button hover-effect">Login</Link>
+            <Link to="/signup" className="signup-button hover-effect">Signup</Link>
+            {/* <button className='login-button hover-effect' onClick={() => setOpenLoginPage(true)}>Login</button> */}
+            {/* <button className='signup-button hover-effect' onClick={() => setOpenSignUpPage(true)}>Sign Up</button> */}
           </div>
         </div>
       </nav>
