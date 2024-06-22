@@ -6,6 +6,7 @@ import '../css/servicesdetails.css';
 import img2 from '../Components/Services/img2.webp';
 import IconComponent from './Icons';
 
+
 const ServicesDefensive = () => {
   return (
     <>
@@ -16,7 +17,7 @@ const ServicesDefensive = () => {
             <img src={img2} alt="img2" />
             <Link to="/services/offensive-penetration-testing"></Link>
             <div className="service-title-container animate__animated">
-              <h1 className="service-title animate__animated animate__fadeInUp">Offensive-Penetration Testing</h1>
+              <h1 className="service-title animate__animated animate__fadeInUp">Defensive-Penetration Testing</h1>
             </div>
           </div>
 

@@ -6,6 +6,7 @@ import '../css/servicesdetails.css';
 import img1 from '../Components/Services/img1.webp';
 import IconComponent from './Icons';
 
+
 const ServicesOffensive = () => {
   return (
     <>
