@@ -104,7 +104,7 @@ const Login = () => {
                       />
                       <label htmlFor='rememberMe'>Remember Me</label>
                     </div>
-                    <Link to='/forgot-password' className='forgot-password-link'>
+                    <Link to='/forgotPassword' className='forgot-password-link'>
                       Forgot your password ?
                     </Link>
                   </div>

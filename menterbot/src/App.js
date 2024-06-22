@@ -12,6 +12,7 @@ import Services from './Components/services';
 import Login from './Components/login';
 import Signup from './Components/signup';
 import Dashboard from "./Components/dashboard";
+import ForgotPassword from "./Components/forgotPassword";
 
 import Blogsmain from './Components/blogs-main';
 import JobDetails from './Components/JobDetails';
@@ -53,8 +54,10 @@ function App() {
         <Route path="/courses/int/:id" element={<CoursesIntDetails/>} />
         <Route path="/courses/exp/:id" element={<CourseExpDetails/>} />
         <Route path="/login" element={<Login />} />
+        <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
+
         <Route path="/job-details/:id" element={<JobDetails />} />
         <Route path="/services/offensive-penetration-testing" element={<ServicesOffensive />} />
         <Route path="/services/defensive-penetration-testing" element={<ServicesDefensive />} />
