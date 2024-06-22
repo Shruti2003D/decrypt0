@@ -9,6 +9,7 @@ const ServicesAuditing = () => {
   return (
     <>
       <section className="services-section">
+        <div className="job-details-content">
           <div className="services-header animate__animated animate__fadeInDown">
             <div className="sbackground-overlay"></div>
             <img src={img3} alt="img3" />
@@ -72,6 +73,7 @@ const ServicesAuditing = () => {
               </div>
             </div>
           </div>
+        </div>
       </section>
       <Footer />
     </>

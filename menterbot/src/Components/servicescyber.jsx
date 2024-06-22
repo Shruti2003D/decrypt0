@@ -5,10 +5,12 @@ import '../css/servicesdetails.css';
 import img4 from '../Components/Services/img4.webp';
 import IconComponent from './Icons';
 
+
 const ServicesCyber = () => {
   return (
     <>
       <section className="services-section">
+        <div className="job-details-content">
           <div className="services-header animate__animated animate__fadeInDown">
             <div className="sbackground-overlay"></div>
             <img src={img4} alt="img4" />
@@ -80,7 +82,7 @@ const ServicesCyber = () => {
               </div>
             </div>
           </div>
-        
+        </div>
       </section>
       <Footer />
     </>

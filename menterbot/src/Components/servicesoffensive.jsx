@@ -11,6 +11,7 @@ const ServicesOffensive = () => {
   return (
     <>
       <section className="services-section">
+        <div className="job-details-content">
           <div className="services-header animate__animated animate__fadeInDown">
             <div className="sbackground-overlay"></div>
             <img src={img1} alt="img1" />
@@ -81,6 +82,7 @@ const ServicesOffensive = () => {
               </div>
             </div>
           </div>
+        </div>
         
       </section>
       <Footer />
