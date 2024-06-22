@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 import '../css/servicesdetails.css';
 import img4 from '../Components/Services/img4.webp';
 import IconComponent from './Icons';
+import Navbar from './Navbar';
+
 
 const ServicesCyber = () => {
   return (
     <>
+    <Navbar/>
       <section className="services-section">
         <div className="job-details-content">
           <div className="services-header animate__animated animate__fadeInDown">

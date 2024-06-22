@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import '../css/JobDetails.css';
 import ApplyAdt from './ApplyAdt';
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 const JobDetails = () => {
   const { id } = useParams();
@@ -62,6 +63,7 @@ const JobDetails = () => {
 
   return (
     <>
+    <Navbar/>
     <section className="center">
       <div className="box-shade">
         {job.jobImage && job.jobImage.data && (

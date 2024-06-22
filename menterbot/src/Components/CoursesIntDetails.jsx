@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../css/CourseIntDetails.css';
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 const CoursesIntDetails = () => {
   const { id } = useParams();
@@ -59,6 +60,8 @@ const CoursesIntDetails = () => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div>
     <section className="center">
       <div className="box-shade">
@@ -138,6 +141,7 @@ const CoursesIntDetails = () => {
     </section>
     <Footer></Footer>
     </div>
+    </>
   );
 };
 

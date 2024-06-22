@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Carrers.css';
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 const Careersmain = () => {
   const [careers, setCareers] = useState([]);
@@ -77,6 +78,7 @@ const Careersmain = () => {
 
   return (
     <>
+    <Navbar/>
       <section className="careers-section">
         <div className="careers-title">Join Our Team</div>
         <div className="careers-subtitle">Explore our current job openings</div>

@@ -6,6 +6,7 @@ import img2 from '../Components/Services/img2.webp';
 import img3 from '../Components/Services/img3.webp';
 import img4 from '../Components/Services/img4.webp';
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 const Services = () => {
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ const Services = () => {
 
   return (
     <>
+    <Navbar/>
       <div className='background-container animate__animated animate__fadeInLeft'>
         <div className='content'>
           <h1>Our Services</h1>

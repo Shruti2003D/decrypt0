@@ -5,10 +5,13 @@ import { Link } from 'react-router-dom';
 import '../css/servicesdetails.css';
 import img2 from '../Components/Services/img2.webp';
 import IconComponent from './Icons';
+import Navbar from './Navbar';
+
 
 const ServicesDefensive = () => {
   return (
     <>
+    <Navbar/>
       <section className="services-section">
         <div className="job-details-content">
           <div className="services-header animate__animated animate__fadeInDown">
@@ -16,7 +19,7 @@ const ServicesDefensive = () => {
             <img src={img2} alt="img2" />
             <Link to="/services/offensive-penetration-testing"></Link>
             <div className="service-title-container animate__animated">
-              <h1 className="service-title animate__animated animate__fadeInUp">Offensive-Penetration Testing</h1>
+              <h1 className="service-title animate__animated animate__fadeInUp">Defensive-Penetration Testing</h1>
             </div>
           </div>
 

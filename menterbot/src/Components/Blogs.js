@@ -1,8 +1,11 @@
 import React from 'react';
 import '../css/blogs.css';// Assuming your CSS file is named blogs.css
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 const Blogs = () => {
   return (
+    <>
+    <Navbar/>
     <div className="Blogs">
 
       <h2>Read From Our Latest Blogs.</h2>
@@ -33,6 +36,7 @@ const Blogs = () => {
       </Link>
 
     </div>
+    </>
   );
 };
 
