@@ -24,7 +24,7 @@ const ForgotPassword = () => {
         <>
             <Header />
             <Navbar />
-            <div className='center'>
+            <div className='forgot-center'>
                 <div>
                     <h1>Forgot your password?</h1>
                     <p>No problem. Let us know your email address and we will email you a password reset link that will allow you to choose a new one.</p>
@@ -37,7 +37,7 @@ const ForgotPassword = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder=""
                         />
-                        <button type='submit' className='orange-btn'>Email Password Reset Link</button>
+                        <button type='submit' className='forgot-btn'>Email Password Reset Link</button>
                     </form>
                     {message && <p>{message}</p>}
                 </div>

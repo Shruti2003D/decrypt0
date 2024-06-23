@@ -16,7 +16,8 @@
 .smodal {
     cursor: default;
     background: white;
-    padding: 45px;
+    padding: 60px;
+    padding-right: 0px;
     width: 100%;
     max-width: 450px;
     height: 65vh;
