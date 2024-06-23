@@ -78,7 +78,7 @@ const Careersmain = () => {
 
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <section className="careers-section">
         <div className="careers-title">Join Our Team</div>
         <div className="careers-subtitle">Explore our current job openings</div>
