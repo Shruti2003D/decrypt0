@@ -62,7 +62,7 @@ const JobDetails = () => {
   }
 
   return (
-    <>
+    <div>
     <Navbar/>
     <section className="center">
       <div className="box-shade">
@@ -124,7 +124,7 @@ const JobDetails = () => {
       </div>
     </section>
     <Footer/>
-    </>
+    </div>
   );
 };
 
