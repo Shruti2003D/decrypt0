@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Header from './Header';
 import Navbar from './Navbar';
-// import "../css/forgotPassword.css";
+import "../css/forgotPassword.css";
 import Footer from "./Footer";
 
 
