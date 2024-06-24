@@ -29,11 +29,39 @@ import CourseBegDetails from "./Components/CourseBegDetails";
 import CourseExpDetails from "./Components/CourseExpDetails";
 import CoursesBeg from "./Components/CoursesBeg";
 import CoursesInt from "./Components/CoursesInt";
+import SummaryApi from "./common";
+import { useEffect } from "react";
+import Context from "./context";
+import { useDispatch } from "react-redux";
+import { setUserDetails } from "./store/userSlice";
 
 function App() {
 
+  const dispatch = useDispatch()
+  const fetchUserDetails = async() => {
+    const dataResponse = await fetch(SummaryApi.current_user.url,{
+      method : SummaryApi.current_user.method,
+      credentials : 'include'
+    })
+
+    const dataApi = await dataResponse.json()
+
+    if(dataApi.success){
+      dispatch(setUserDetails(dataApi.data))
+    }
+
+    console.log("data-user",dataResponse)
+  }
+
+  useEffect(()=>{
+    fetchUserDetails()
+  },[])
+
   return (
     <>
+    <Context.Provider value={{
+      fetchUserDetails
+    }}>
     <ToastContainer />
     <Router>
       {/* <Navbar /> */}
@@ -67,6 +95,7 @@ function App() {
         <Route path="/blogs/:title" element={<IndividualBlogInformation />} />
       </Routes>
     </Router>
+    </Context.Provider>
   </>
   );
 }

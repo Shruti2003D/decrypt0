@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 // import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { FaRegCircleUser } from "react-icons/fa6";
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 // import ROLE from '../common/role';
 import '../css/dashboard.css'; // Import the CSS file
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.png";
+import Context from '../context';
 
 const Dashboard = () => {
+  const user = useSelector(state => state?.user?.user);
   return (
 
     <div className='dashboard-container'>
@@ -20,7 +22,7 @@ const Dashboard = () => {
 
       <main className='dashboard-main'>
         <h1>Dashboard</h1>
-        <h2>Welcome back, OM</h2>
+        <h2>Welcome back, {user?.name}</h2>
         <div className=''></div>
 
         <div className='dashboard-body'>

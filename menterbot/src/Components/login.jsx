@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { CgClose } from "react-icons/cg";
 import { Link, useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
@@ -7,6 +7,7 @@ import Home from './Home';
 import Signup from './signup';
 import SummaryApi from '../common';
 import { toast } from 'react-toastify';
+import Context from '../context';
 
 const Login = () => {
   const [openSignUpPage, setOpenSignUpPage] = useState(false);
@@ -17,6 +18,8 @@ const Login = () => {
     password: ""
   });
   const navigate = useNavigate()
+
+  const { fetchUserDetails } = useContext(Context);
 
   const handleOnChange = (e) => {
     const { name, value } = e.target
@@ -45,6 +48,7 @@ const Login = () => {
     if(dataApi.success){
       toast.success(dataApi.message)
       navigate('/dashboard')
+      fetchUserDetails()
     }
 
     if(dataApi.error){
